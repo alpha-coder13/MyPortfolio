@@ -1,0 +1,9 @@
+{
+    "links":[
+        {"name":"About Me","link":"#home"},
+        {"name":"Projects","link":"#projects"},
+        {"name":"Experience","link":"#experience"},
+        {"name":"Contact","link":"#contact"}
+    ],
+    "sample-text":""
+}
