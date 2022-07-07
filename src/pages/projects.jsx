@@ -9,7 +9,7 @@ export default function Projects(){
         width:"90vw",
         height:"90vh",
         padding:"5vw",
-        backgroundColor:"purple"
+        backgroundColor:"white"
     }}>
         <div style={{
             backgroundColor:"rgba(255,255,255,0.44)",
