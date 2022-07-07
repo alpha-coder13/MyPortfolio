@@ -31,6 +31,7 @@ export default function Home(){
             width:"40vw",
             display:"flex",
             flexDirection:"row",
+            justifyContent:"flex-start",
             margin:"auto",
             height:"auto",
             flexWrap:"wrap
