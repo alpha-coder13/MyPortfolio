@@ -9,10 +9,10 @@ export default function Contact(){
         width:"90vw",
         height:"90vh",
         padding:"5vw",
-        backgroundColor:"purple"
+        backgroundColor:"white"
     }}>
         <div style={{
-            backgroundColor:"white",
+            backgroundColor:"rgba(255,255,255,0.14)",
             borderRadius:"3%",
             width:"70vw",
             display:"flex",
