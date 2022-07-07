@@ -12,7 +12,7 @@ export default function Contact(){
         backgroundColor:"purple"
     }}>
         <div style={{
-            backgroundColor:"rgba(255,255,255,0.44)",
+            backgroundColor:"white",
             borderRadius:"3%",
             width:"70vw",
             display:"flex",
