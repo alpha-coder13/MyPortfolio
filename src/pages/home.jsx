@@ -34,7 +34,7 @@ export default function Home(){
             justifyContent:"flex-start",
             margin:"auto",
             height:"auto",
-            flexWrap:"wrap
+            flexWrap:"wrap"
         }}>
              <img src={{}} style={{height:"30vh",width:"30vh",borderRadius:"50%", marginRight:"3vh"}}></img>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin et finibus velit, rutrum gravida diam. Nunc ut dolor quis lacus ultricies accumsan et in mi. Morbi nisl ipsum, facilisis id bibendum ac, consequat at arcu. Mauris id vestibulum velit. Vestibulum gravida congue quam. Praesent eu ultricies leo. Morbi ornare justo a lacus pharetra pellentesque. Nam molestie tincidunt odio. Vivamus a pellentesque elit, iaculis mattis felis.
