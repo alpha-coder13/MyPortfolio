@@ -22,16 +22,15 @@ export default function Home(){
             margin:"auto",
             height:"auto"
         }}>
-        <div style={{display:"flex",flexDirection:"column",justifyContent:"center",alignItems:"center",fontFamily:"'Balsamiq Sans',cursive",fontSize:"5vh",margin:"auto",}}>
-            About Me
-           
+        <div style={{display:"flex",justifyContent:"flex-start",alignItems:"center",fontFamily:"'Balsamiq Sans',cursive",fontSize:"5vh",margin:"auto",}}>
+            About Me   
         </div>
          <div style={{
             backgroundColor:"rgba(255,255,255,0.44)",
             borderRadius:"3%",
             width:"70vw",
             display:"flex",
-            flexDirection:"column",
+            flexDirection:"row",
 
             padding:"3vh",
             margin:"auto",
