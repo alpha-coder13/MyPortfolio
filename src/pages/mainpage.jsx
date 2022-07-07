@@ -46,7 +46,7 @@ export default function Main(){
                 fontSmooth:"always",}}>I am&nbsp;</div>
                 <div style={{color:"purple", fontSize:"10vh",
                 fontSmooth:"always",}}>Amardeep&nbsp;</div>  
-                <div style-{{ fontSize:"10vh",
+                <div style={{ fontSize:"10vh",
                 fontSmooth:"always",}} 0>Saha</div>
                 </div>
                 <div style={{display:"flex",
