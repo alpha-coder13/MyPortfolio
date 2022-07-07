@@ -75,7 +75,7 @@ export default function Main(){
             flexDirection:"row",
             height:"auto",
             width:"100vw",
-            margin:"auto",
+            marginTop:"auto",
             justifyContent:"center",
             alignItems:"center",
             position:"sticky",
