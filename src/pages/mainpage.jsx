@@ -36,11 +36,13 @@ export default function Main(){
                 fontFamily:"'Balsamiq Sans', cursive",
                 fontSize:"10vh",
                 fontSmooth:"always",
-            }}>
+            }}> <div style={{display:"flex",
+                flexDirection:"column",margin:"auto",}}>
                 <div style={{display:"flex",
                 flexDirection:"row",margin:"auto",}}>
                 <div style={{color:"purple"}}>Amardeep&nbsp;</div>
                 <div >Saha</div>
+                </div>
                 </div>
                 <div style={{
                     display:"flex",
