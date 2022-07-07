@@ -14,7 +14,7 @@ export default function Home(){
         <div style={{
             backgroundColor:"rgba(255,255,255,0.44)",
             borderRadius:"3%",
-            width:"40vw",
+            width:"50vw",
             display:"flex",
             flexDirection:"column",
 
@@ -28,7 +28,7 @@ export default function Home(){
          <div style={{
             backgroundColor:"rgba(255,255,255,0.44)",
             borderRadius:"3%",
-            width:"40vw",
+            width:"50vw",
             display:"flex",
             flexDirection:"row",
             justifyContent:"flex-start",
