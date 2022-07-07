@@ -38,11 +38,10 @@ export default function Main(){
                  <div style={{display:"flex",
                 flexDirection:"row",marginTop:"2vh", fontFamily:"'Balsamiq Sans', cursive",
                 fontSize:"3vh",
-                fontSmooth:"always",}}>
-                <div>Hi! everyone,</div>
+                fontSmooth:"always",}}>Hi! everyone
                 </div>
                 <div style={{display:"flex",
-                flexDirection:"row",margin:"auto", fontFamily:"'Balsamiq Sans', cursive",}}>
+                flexDirection:"row",margin:"auto", fontFamily:"'Balsamiq Sans', cursive"}}>
                 <div style={{ fontSize:"3vh",
                 fontSmooth:"always",}}>I am&nbsp;</div>
                 <div style={{color:"purple", fontSize:"10vh",
@@ -54,7 +53,7 @@ export default function Main(){
                 flexDirection:"row",marginTop:"2vh", fontFamily:"'Balsamiq Sans', cursive",
                 fontSize:"3vh",
                 fontSmooth:"always",}}>
-                <div>an blockchain enthusiast and a full stack developer.</div>
+                an blockchain enthusiast and a full stack developer.
                 </div>
                 </div>
                 <div style={{
