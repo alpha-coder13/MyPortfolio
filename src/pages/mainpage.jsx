@@ -25,7 +25,7 @@ export default function Main(){
             position:"absolute",
         }}>
             <div id="header" style={{
-                justifyContent:"center",
+                justifyContent:"flex-start",
                 display:"flex",
                 flexDirection:"row",
                 alignItems:"center",
