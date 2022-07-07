@@ -50,7 +50,7 @@ export default function Main(){
                 fontSmooth:"always"}}>Saha</div>
                 </div>
                 <div style={{display:"flex",
-                flexDirection:"row",marginTop:"2vh", fontFamily:"'Balsamiq Sans', cursive",
+                flexDirection:"row",marginTop:"1vh", fontFamily:"'Balsamiq Sans', cursive",
                 fontSize:"3vh",
                 fontSmooth:"always"}}>
                 an blockchain enthusiast and a full stack developer.
