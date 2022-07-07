@@ -76,6 +76,7 @@ export default function Main(){
             height:"auto",
             width:"100vw",
             marginTop:"auto",
+            marginBottom:"auto",
             justifyContent:"center",
             alignItems:"center",
             position:"sticky",
