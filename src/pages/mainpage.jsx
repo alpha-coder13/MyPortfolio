@@ -39,14 +39,16 @@ export default function Main(){
                 flexDirection:"row",marginTop:"2vh", fontFamily:"'Balsamiq Sans', cursive",
                 fontSize:"3vh",
                 fontSmooth:"always",}}>
-                <div>Hi! everyone, I am</div>
+                <div>Hi! everyone,</div>
                 </div>
                 <div style={{display:"flex",
-                flexDirection:"row",margin:"auto", fontFamily:"'Balsamiq Sans', cursive",
-                fontSize:"10vh",
-                fontSmooth:"always",}}>
-                <div style={{color:"purple"}}>Amardeep&nbsp;</div>  
-                <div >Saha</div>
+                flexDirection:"row",margin:"auto", fontFamily:"'Balsamiq Sans', cursive",}}>
+                <div style={{ fontSize:"3vh",
+                fontSmooth:"always",}}>{"I'm"}&nbsp</div>
+                <div style={{color:"purple", fontSize:"10vh",
+                fontSmooth:"always",}}>Amardeep&nbsp;</div>  
+                <div style-{{ fontSize:"10vh",
+                fontSmooth:"always",}} 0>Saha</div>
                 </div>
                 <div style={{display:"flex",
                 flexDirection:"row",marginTop:"2vh", fontFamily:"'Balsamiq Sans', cursive",
