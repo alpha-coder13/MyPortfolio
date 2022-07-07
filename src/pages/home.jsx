@@ -22,7 +22,7 @@ export default function Home(){
             margin:"auto",
             height:"auto"
         }}>
-        <div style={{display:"flex",justifyContent:"flex-start",alignItems:"center",fontFamily:"'Balsamiq Sans',cursive",fontSize:"5vh"}}>
+        <div style={{display:"flex",justifyContent:"flex-start",alignItems:"center",fontFamily:"'Balsamiq Sans',cursive",fontSize:"5vh",marginBottom:"2vh"}}>
             About Me   
         </div>
          <div style={{
