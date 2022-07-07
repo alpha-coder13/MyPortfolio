@@ -33,15 +33,20 @@ export default function Main(){
                 padding:"15px", 
                 height:"87vh",  
                 position:"sticky",
-                fontFamily:"'Balsamiq Sans', cursive",
-                fontSize:"10vh",
-                fontSmooth:"always",
             }}> <div style={{display:"flex",
                 flexDirection:"column",margin:"auto",}}>
                 <div style={{display:"flex",
-                flexDirection:"row",margin:"auto",}}>
+                flexDirection:"row",margin:"auto", fontFamily:"'Balsamiq Sans', cursive",
+                fontSize:"10vh",
+                fontSmooth:"always",}}>
                 <div style={{color:"purple"}}>Amardeep&nbsp;</div>
                 <div >Saha</div>
+                </div>
+                <div style={{display:"flex",
+                flexDirection:"row",marginTop:"2vh", fontFamily:"'Balsamiq Sans', cursive",
+                fontSize:"3vh",
+                fontSmooth:"always",}}>
+                <div>Your average tech enthusiast</div>
                 </div>
                 </div>
                 <div style={{
