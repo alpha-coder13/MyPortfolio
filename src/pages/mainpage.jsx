@@ -74,6 +74,7 @@ export default function Main(){
             position:"sticky",
             top:"0px",
             backgroundColor:"rgba(255,255,255,0.64)",
+            backdropFilter:"blur(1vh)",
             boxShadow:"initial"
         }}>
             
