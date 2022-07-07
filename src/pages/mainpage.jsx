@@ -73,7 +73,7 @@ export default function Main(){
             alignItems:"center",
             position:"sticky",
             top:"0px",
-            backgroundColor:"white",
+            backgroundColor:"rgba(255,255,255,0.14)",
             boxShadow:"initial"
         }}>
             
