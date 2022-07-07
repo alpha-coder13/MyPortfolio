@@ -43,7 +43,7 @@ export default function Main(){
                 <div style={{display:"flex",
                 flexDirection:"row",alignItems:"flex-end",margin:"auto", fontFamily:"'Balsamiq Sans', cursive",height:"auto"}}>
                 <div style={{fontSize:"3vh",
-                fontSmooth:"always"}}>I am&nbsp;</div>
+                fontSmooth:"always",paddingBottom:"2vh"}}>I am&nbsp;</div>
                 <div style={{color:"purple", fontSize:"10vh",
                 fontSmooth:"always"}}>Amardeep&nbsp;</div>  
                 <div style={{ fontSize:"10vh",
