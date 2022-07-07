@@ -43,16 +43,16 @@ export default function Main(){
                 <div style={{display:"flex",
                 flexDirection:"row",margin:"auto", fontFamily:"'Balsamiq Sans', cursive"}}>
                 <div style={{ fontSize:"3vh",
-                fontSmooth:"always",}}>I am&nbsp;</div>
+                fontSmooth:"always"}}>I am&nbsp;</div>
                 <div style={{color:"purple", fontSize:"10vh",
-                fontSmooth:"always",}}>Amardeep&nbsp;</div>  
+                fontSmooth:"always"}}>Amardeep&nbsp;</div>  
                 <div style={{ fontSize:"10vh",
-                fontSmooth:"always",}}>Saha</div>
+                fontSmooth:"always"}}>Saha</div>
                 </div>
                 <div style={{display:"flex",
                 flexDirection:"row",marginTop:"2vh", fontFamily:"'Balsamiq Sans', cursive",
                 fontSize:"3vh",
-                fontSmooth:"always",}}>
+                fontSmooth:"always"}}>
                 an blockchain enthusiast and a full stack developer.
                 </div>
                 </div>
