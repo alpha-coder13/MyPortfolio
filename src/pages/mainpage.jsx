@@ -80,6 +80,7 @@ export default function Main(){
             alignItems:"center",
             position:"sticky",
             top:"0px",
+            bottom:"0px",
             backdropFilter:"blur(5px)",
             boxShadow:"initial"
         }}>
