@@ -67,7 +67,7 @@ export default function Main(){
             <div style={{ display:"flex",
             flexDirection:"row",
             height:"auto",
-            width:"100vw",
+            width:"95vw",
             margin:"auto",
             justifyContent:"center",
             alignItems:"center",
