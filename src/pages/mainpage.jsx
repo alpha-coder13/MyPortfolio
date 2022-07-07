@@ -84,7 +84,7 @@ export default function Main(){
                         width:"auto",
                         height:"auto",
                         margin:"auto",
-                        padding:"1vh",
+                        padding:"2vh",
                         width:"auto",
                     }}
                 ><HashLink to={nm.link} smooth style={{ textDecoration:"none"}}>{nm.name}</HashLink></div>
