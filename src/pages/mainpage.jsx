@@ -41,8 +41,8 @@ export default function Main(){
                 fontSmooth:"always",}}>Hi! everyone
                 </div>
                 <div style={{display:"flex",
-                flexDirection:"row",margin:"auto", fontFamily:"'Balsamiq Sans', cursive"}}>
-                <div style={{display:"flex",justifyContent:"bottom", fontSize:"3vh",
+                flexDirection:"row",alignItems:"bottom",margin:"auto", fontFamily:"'Balsamiq Sans', cursive"}}>
+                <div style={{fontSize:"3vh",
                 fontSmooth:"always"}}>I am&nbsp;</div>
                 <div style={{color:"purple", fontSize:"10vh",
                 fontSmooth:"always"}}>Amardeep&nbsp;</div>  
