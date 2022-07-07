@@ -67,7 +67,7 @@ export default function Main(){
             <div style={{ display:"flex",
             flexDirection:"row",
             height:"auto",
-            width:"95vw",
+            width:"100vw",
             margin:"auto",
             justifyContent:"center",
             alignItems:"center",
@@ -84,7 +84,7 @@ export default function Main(){
                         width:"auto",
                         height:"auto",
                         margin:"auto",
-                        padding:"3vh",
+                        padding:"1vh",
                         width:"auto",
                     }}
                 ><HashLink to={nm.link} smooth style={{ textDecoration:"none"}}>{nm.name}</HashLink></div>
