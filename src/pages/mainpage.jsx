@@ -21,7 +21,7 @@ export default function Main(){
             alignItems:"center",
             justifyContents:"center",
             width:"100vw",
-            height:"auto",
+            height:"100vh",
             position:"absolute",
         }}>
             <div id="header" style={{
