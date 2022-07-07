@@ -73,7 +73,7 @@ export default function Main(){
             alignItems:"center",
             position:"sticky",
             top:"0px",
-            backdropFilter:"blur(1vh)",
+            backdropFilter:"blur(5px)",
             boxShadow:"initial"
         }}>
             
