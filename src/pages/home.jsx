@@ -14,12 +14,14 @@ export default function Home(){
         <div style={{
             backgroundColor:"rgba(255,255,255,0.44)",
             borderRadius:"3%",
-            width:"50vw",
+            width:"70vw",
             display:"flex",
             flexDirection:"column",
 
             padding:"3vh",
-            margin:"auto",
+            marginLeft:"auto",
+            marginTop:"auto",
+            marginBottom:"auto",
             height:"auto"
         }}>
         <div style={{display:"flex",justifyContent:"flex-start",alignItems:"center",fontFamily:"'Balsamiq Sans',cursive",fontSize:"5vh",marginBottom:"2vh"}}>
@@ -28,18 +30,43 @@ export default function Home(){
          <div style={{
             backgroundColor:"rgba(255,255,255,0.44)",
             borderRadius:"3%",
-            width:"50vw",
+            width:"70vw",
             display:"flex",
             flexDirection:"row",
             justifyContent:"flex-start",
             margin:"auto",
             height:"auto",
+            lineHeight:"30px"
+        }}>    <div style={{
+            height:"auto",
+            width:"auto",
+            justifyContent:"center",
+            alignItems:"flex-start",
+            flexDirection:"column",
         }}>
-             <img src={{}} style={{height:"30vh",width:"30vh",borderRadius:"50%", marginRight:"3vh"}}></img>
+             <img src={{}} style={{height:"30vh",width:"30vh",borderRadius:"50%", marginRight:"7vh"}}></img>
+             <button style={{backgroundColor:"purple", border:'0px',color:"white",fontSize:"2vh"}} type="submit" formAction="mailto" href="amardeepsaah13@gmail.com">message me</button>
+            </div>
             <div>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin et finibus velit, rutrum gravida diam. Nunc ut dolor quis lacus ultricies accumsan et in mi. Morbi nisl ipsum, facilisis id bibendum ac, consequat at arcu. Mauris id vestibulum velit. Vestibulum gravida congue quam. Praesent eu ultricies leo. Morbi ornare justo a lacus pharetra pellentesque. Nam molestie tincidunt odio. Vivamus a pellentesque elit, iaculis mattis felis.
+            I am currently an undergraduate student pursuing my B.Tech in Computer Science and engineering from Indian Institute of Information Technology Ranchi. I am Tech freak and a Full-stack developer. Being a Tech freak I am interested in various topics some of which are  Blockchain and web3, AI/ML , Cybersecurity , System design , Kernel Programming ..... and the list keeps growing. Among them I am currently inclined towards Blockchain developement and web3 space.     
         <br/><br/>
-        Nullam ipsum magna, dictum vel orci ac, gravida molestie metus. Integer aliquet sem at ante lobortis tristique. Sed orci ipsum, ullamcorper eu gravida eu, fringilla a ex. Curabitur vehicula quis nisl nec viverra. Maecenas quis quam blandit, tempus velit ut, auctor lacus. Nam a nisl quis augue feugiat auctor quis et orci. Aliquam erat volutpat. Integer mollis lacus quis iaculis malesuada. In condimentum metus sit amet egestas faucibus. </div> 
+        <b>Here are few Tech stack that I am aquainted to or have worked with:-</b>
+        <br/>
+        <ul typeof="none">
+            <li><b>Frontend</b>: Javascript, HTML, CSS, React .</li>
+            <br></br>
+            <li><b>Backend</b>: Django, NodeJS, ExpressJS .</li>
+            <br></br>
+            <li><b>Database Tools</b>: MongoDB, sqlite3 (django).</li>
+            <br></br>
+            <li><b>Web3 Frameworks</b>: web3.js, Ethers.js, Truffle, Hardhat.</li>
+            <br></br>
+            <li><b>Scripting Languages</b>: Shell, Python (&gt;3.7), C++17, Solidity (smart contract).</li>
+        </ul>
+        <br>
+        </br>
+        Apart from hugging the documentations all the time I do enjoy playing Badminton, Football and various competetive esports in my free time. <b>XD</b>
+        </div> 
         </div>       
 </div>
 </div>

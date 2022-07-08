@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Contact from "./contact";
 import Experience from "./experience";
@@ -10,11 +10,29 @@ import logo from '../My project.jpg';
 import links from '../utility.json'
 
 export default function Main(){
-
-    
     const Lnk=links.links;
+    
+    useEffect(()=>{
+        document.addEventListener("scroll",(ev)=>{
+            Lnk.map((nm)=>{
+            var h=document.querySelector(nm.link).scrollHeight
+            var k=document.querySelector(nm.link).offsetTop
+            
+            console.log(window.scrollY)
+            if(window.scrollY>=k && window.scrollY<h+k){
+                console.log(nm.name)
+                document.getElementById(`${nm.name}`).style.borderBottom="3px solid purple"
+            }
+            else{
+                document.getElementById(`${nm.name}`).style.borderBottom="0px solid rgba(0,0,0,0.24)"
+            }
+            })
+            
+        })
+    },[])    
+    
     return (
-        <div
+        <div 
         style={{
             display:"flex",
             flexDirection:"column",
@@ -29,9 +47,8 @@ export default function Main(){
                 display:"flex",
                 flexDirection:"row",
                 alignItems:"center",
-                margin:"auto",
-                padding:"15px", 
-                height:"87vh",  
+                marginBottom:"auto",
+                height:"95vh",  
                 position:"sticky",
             }}> <div style={{display:"flex",
                 flexDirection:"column",margin:"auto",}}>
@@ -53,7 +70,7 @@ export default function Main(){
                 flexDirection:"row",marginTop:"1vh", fontFamily:"'Balsamiq Sans', cursive",
                 fontSize:"3vh",
                 fontSmooth:"always"}}>
-                an blockchain enthusiast and a full stack developer.
+                an&nbsp;<span style={{fontWeight:"bold", backgroundColor:"rgba(0,0,0,0.24)"}}>Tech enthusiast</span>&nbsp;and a&nbsp;<span style={{ backgroundColor:"rgba(0,0,0,0.24)", fontWeight:"bold"}}>full stack developer</span>&nbsp;.
                 </div>
                 </div>
                 <div style={{
@@ -81,20 +98,22 @@ export default function Main(){
             alignItems:"center",
             position:"sticky",
             top:"0px",
-            bottom:"0px",
-            backdropFilter:"blur(5px)",
-            boxShadow:"initial"
+            backgroundColor:"rgba(255,255,255,0.94)",
+            backdropFilter:"blur(10px)",
+            boxShadow:"-0.2px 5px 7px rgba(0,0,0,0.07)"
         }}>
             
             <BrowserRouter>
             {Lnk.map((nm)=>
                 {
-                    return(<div style={{
+                    return(<div id={`${nm.name}`} style={{
+                        display:"flex",
                         width:"auto",
-                        height:"auto",
+                        height:"5vh",
                         margin:"auto",
-                        padding:"2vh",
-                        width:"auto",
+                        border:"0px",
+                        alignItems:"center",
+                        justifyContent:"center",
                     }}
                 ><HashLink to={nm.link} smooth style={{ textDecoration:"none"}}>{nm.name}</HashLink></div>
                 )
