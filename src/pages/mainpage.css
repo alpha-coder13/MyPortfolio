@@ -1,0 +1,8 @@
+div#main{
+    animation: fade 5s 1;
+}
+
+@keyframes fade {
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}

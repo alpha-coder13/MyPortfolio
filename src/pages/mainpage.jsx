@@ -8,6 +8,7 @@ import Projects from "./projects";
 import { HashLink } from "react-router-hash-link";
 import logo from '../My project.jpg';
 import links from '../utility.json'
+import './mainpage.css'
 
 export default function Main(){
     const Lnk=links.links;
@@ -33,6 +34,7 @@ export default function Main(){
     
     return (
         <div 
+        id="main"
         style={{
             display:"flex",
             flexDirection:"column",
@@ -40,7 +42,7 @@ export default function Main(){
             justifyContents:"center",
             width:"100vw",
             height:"auto",
-            position:"absolute",
+            position:"absolute"
         }}>
             <div id="header" style={{
                 justifyContent:"flex-start",
