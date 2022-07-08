@@ -48,7 +48,7 @@ export default function Main(){
                 flexDirection:"row",
                 alignItems:"center",
                 marginBottom:"auto",
-                height:"95vh",  
+                height:"100vh",  
                 position:"sticky",
             }}> <div style={{display:"flex",
                 flexDirection:"column",margin:"auto",}}>
