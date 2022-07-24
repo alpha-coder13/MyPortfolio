@@ -45,7 +45,7 @@ export default function Home(){
             flexDirection:"column",
         }}>
              <img src={{}} style={{height:"30vh",width:"30vh",borderRadius:"50%", marginRight:"7vh"}}></img>
-             <button style={{backgroundColor:"purple", border:'0px',color:"white",fontSize:"2vh"}} type="submit" formAction="mailto" href="amardeepsaah13@gmail.com">message me</button>
+             
             </div>
             <div>
             I am currently an undergraduate student pursuing my B.Tech in Computer Science and engineering from Indian Institute of Information Technology Ranchi. I am Tech freak and a Full-stack developer. Being a Tech freak I am interested in various topics some of which are  Blockchain and web3, AI/ML , Cybersecurity , System design , Kernel Programming ..... and the list keeps growing. Among them I am currently inclined towards Blockchain developement and web3 space.     
@@ -65,7 +65,7 @@ export default function Home(){
         </ul>
         <br>
         </br>
-        Apart from hugging the documentations all the time I do enjoy playing Badminton, Football and various competetive esports in my free time. <b>XD</b>
+        Apart from hugging the documentations all the time I do enjoy playing Badminton, Football and various competitive esports in my free time. <b>XD</b>
         </div> 
         </div>       
 </div>

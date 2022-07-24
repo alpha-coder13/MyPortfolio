@@ -2,8 +2,14 @@
     "links":[
         {"name":"About Me","link":"#home"},
         {"name":"Projects","link":"#projects"},
+        {"name":"Research Work","link":"#research"},
         {"name":"Experience","link":"#experience"},
         {"name":"Contact","link":"#contact"}
     ],
-    "sample-text":""
+    "sample-text":"",
+    "pages":[
+        {"id":"projects"},
+        {"id":"research"},
+        {"id":"experience"}
+    ]
 }

@@ -4,7 +4,7 @@ import Contact from "./contact";
 import Experience from "./experience";
 import { HashRouter } from "react-router-dom";
 import Home from "./home";
-import Projects from "./projects";
+// import Projects from "./projects";
 import { HashLink } from "react-router-hash-link";
 import logo from '../My project.jpg';
 import links from '../utility.json'
@@ -12,6 +12,8 @@ import './mainpage.css'
 
 export default function Main(){
     const Lnk=links.links;
+    // var l;
+    // if(navigator.userAgent)
     
     useEffect(()=>{
         document.addEventListener("scroll",(ev)=>{
@@ -20,7 +22,7 @@ export default function Main(){
             var k=document.querySelector(nm.link).offsetTop
             
             console.log(window.scrollY)
-            if(window.scrollY>=k && window.scrollY<h+k){
+            if(window.scrollY>k && window.scrollY<h+k){
                 console.log(nm.name)
                 document.getElementById(`${nm.name}`).style.borderBottom="3px solid purple"
             }
@@ -100,7 +102,7 @@ export default function Main(){
             alignItems:"center",
             position:"sticky",
             top:"0px",
-            backgroundColor:"rgba(255,255,255,0.94)",
+            backgroundColor:"rgba(255,255,255,0.4)",
             backdropFilter:"blur(10px)",
             boxShadow:"-0.2px 5px 7px rgba(0,0,0,0.07)"
         }}>
@@ -117,16 +119,17 @@ export default function Main(){
                         alignItems:"center",
                         justifyContent:"center",
                     }}
-                ><HashLink to={nm.link} smooth style={{ textDecoration:"none"}}>{nm.name}</HashLink></div>
+                ><HashLink to={nm.link} smooth style={{ textDecoration:"none", color:"black"}}>{nm.name}</HashLink></div>
                 )
                 }
             )}
             </BrowserRouter>          
         </div>            
             <Home></Home>
-            <Projects></Projects>
-            <Experience></Experience>
+            {/* <Projects></Projects> */}
+            <Experience pages={links.pages}></Experience>
             <Contact></Contact>
+            
         </div>
     )
 }
