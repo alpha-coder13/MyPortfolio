@@ -124,7 +124,7 @@ export default function Main(){
             </BrowserRouter>          
         </div>            
             <Home></Home>
-            <Experience></Experience>
+            <Experience pages={links.pages}></Experience>
             <Contact></Contact>
         </div>
     )
