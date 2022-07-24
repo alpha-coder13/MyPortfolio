@@ -5,7 +5,6 @@ import Contact from "./contact";
 import Experience from "./experience";
 import { HashRouter } from "react-router-dom";
 import Home from "./home";
-import Projects from "./projects";
 import { HashLink } from "react-router-hash-link";
 import logo from '../My project.jpg';
 import links from '../utility.json'
@@ -125,7 +124,6 @@ export default function Main(){
             </BrowserRouter>          
         </div>            
             <Home></Home>
-            <Projects></Projects>
             <Experience></Experience>
             <Contact></Contact>
         </div>
