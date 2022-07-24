@@ -117,7 +117,7 @@ export default function Main(){
                         alignItems:"center",
                         justifyContent:"center",
                     }}
-                ><HashLink to={nm.link} smooth style={{ textDecoration:"none"}}>{nm.name}</HashLink></div>
+                ><HashLink to={nm.link} smooth style={{ textDecoration:"none",color:"black"}}>{nm.name}</HashLink></div>
                 )
                 }
             )}
