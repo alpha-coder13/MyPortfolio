@@ -33,17 +33,7 @@ export default function Main(){
     },[])    
     
     return (
-        <div 
-        id="main"
-        style={{
-            display:"flex",
-            flexDirection:"column",
-            alignItems:"center",
-            justifyContents:"center",
-            width:"100vw",
-            height:"auto",
-            position:"absolute"
-        }}>
+        <div id="main">
             <div id="header" style={{
                 justifyContent:"flex-start",
                 display:"flex",
@@ -61,8 +51,7 @@ export default function Main(){
                 </div>
                 <div style={{display:"flex",
                 flexDirection:"row",alignItems:"flex-end",marginRight:"auto",marginTop:"auto", fontFamily:"'Balsamiq Sans', cursive",height:"auto"}}>
-                <div style={{fontSize:"3vh",
-                fontSmooth:"always",paddingBottom:"2vh"}}>I'm&nbsp;&nbsp;</div>
+                <div style={{fontSize:"3vh",fontSmooth:"always",paddingBottom:"2vh"}}>I'm&nbsp;&nbsp;</div>
                 <div style={{color:"purple", fontSize:"8vh",
                 fontSmooth:"always"}}>Amardeep&nbsp;</div>  
                 <div style={{ fontSize:"8vh",
