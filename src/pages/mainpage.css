@@ -6,7 +6,7 @@ div#main{
     justify-content: center;
     width: 100vw ;
     height: auto;
-    position: absolute"
+    position: absolute;
 }
 
 @keyframes fade {
