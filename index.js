@@ -25,7 +25,9 @@ function RequestHandler(req,res){
         case '/':{
             const filePath =join(__dirname,'data','About.json');
             const data = readFile(filePath,'utf-8');
+            
             data.then(data => {
+                data = JSON.parse(data);
                 res.writeHead(200,{'Content-Type':'application/json'});
                 res.end(JSON.stringify({
                     data : data,
@@ -56,9 +58,10 @@ function RequestHandler(req,res){
             const filePath =join(__dirname,'data','Experience.json');
             const data = readFile(filePath,'utf-8');
             data.then(data => {
+                data = JSON.parse(data);
                 res.writeHead(200,{'Content-Type':'application/json'});
                 res.end(JSON.stringify({
-                    data : JSON.parse(data),
+                    data : data,
                     error : null,
                     paths : {
                         '/':"about me",
@@ -87,9 +90,10 @@ function RequestHandler(req,res){
             const data = readFile(filePath,'utf-8');
             data.then(data => {
                 console.log(data);
+                data = JSON.parse(data);
                 res.writeHead(200,{'Content-Type':'application/json'});
                 res.end(JSON.stringify({
-                    data : JSON.parse(data),
+                    data : data,
                     error : null,
                     paths : {
                         '/':"about me",
