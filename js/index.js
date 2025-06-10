@@ -63,7 +63,9 @@ document.getElementById('toggleBulb').addEventListener('click',(e)=>{
 const experienceSection = document.querySelector('div.section-work .inner-container');
 const projectSection = document.querySelector('div.section-work .inner-container');
 
-fetch('https://myportfolio-nu64.onrender.com/').then(data => {
+fetch('https://myportfolio-nu64.onrender.com/experience',{
+    mode:'cors',
+}).then(data => {
     if( data.statusText == 'OK'){
         return data.json();
     }
