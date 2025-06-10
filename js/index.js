@@ -61,23 +61,40 @@ document.getElementById('toggleBulb').addEventListener('click',(e)=>{
     e.target.value = !val;
 })
 const experienceSection = document.querySelector('div.section-work .inner-container');
-const projectSection = document.querySelector('div.section-work .inner-container');
+const projectSection = document.querySelector('div.section-projects .inner-container');
 
 fetch('https://myportfolio-nu64.onrender.com/experience',{
     mode:'cors',
 }).then(data => {
-    // if( data.statusText == 'OK'){
         return data.json();
-    // }
 }).then((data) => {
         
         const property = "Experience";
-        experienceSection.innerHTML = "<></>";
-        if(typeof data.data !== 'string'){
+        experienceSection.innerHTML = "";
+        if(typeof data.data !== 'string' || data.data.length !== 0){
             data.data.forEach((value, idx) => {
                 const card = new Cards(value.src, value.intro,value.id, property);
                 experienceSection.appendChild(card.get());
             })
+        }
+        
+}).catch(e =>  console.log(e.message));
+
+fetch('https://myportfolio-nu64.onrender.com/projects',{
+    mode:'cors',
+}).then(data => {
+        return data.json();
+}).then((data) => {
+        
+        const property = "Projects";
+        projectSection.innerHTML = "";
+        if(typeof data.data !== 'string' || data.data.length !== 0){
+            data.data.forEach((value, idx) => {
+                const card = new Cards(value.src, value.intro,value.id, property);
+                projectSection.appendChild(card.get());
+            })
+        }else{
+                projectSection.innerHTML("Nothing to Show Here");
         }
         
 }).catch(e =>  console.log(e.message));
