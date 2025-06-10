@@ -2,10 +2,18 @@ const http =require('http');
 
 const server = http.createServer();
 
+const setCorsHeaders = (req, res) => {
+    res.setHeader('Access-Control-Allow-Origin', 'https://alpha-coder13.github.io/MyPortfolio/');
+    res.setHeader('Access-Control-Allow-Methods', 'GET');
+    res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+  }
+
 server.listen(3000);
 
 server.on('request',(req,res)=>{
-    return RequestHandler(req,res);
+    setCorsHeaders(req,res);
+    RequestHandler(req,res);
+    return;
 });
 
 
