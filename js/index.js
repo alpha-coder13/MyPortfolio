@@ -66,9 +66,9 @@ const projectSection = document.querySelector('div.section-work .inner-container
 fetch('https://myportfolio-nu64.onrender.com/experience',{
     mode:'cors',
 }).then(data => {
-    if( data.statusText == 'OK'){
+    // if( data.statusText == 'OK'){
         return data.json();
-    }
+    // }
 }).then((data) => {
         
         const property = "Experience";
