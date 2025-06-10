@@ -63,20 +63,21 @@ document.getElementById('toggleBulb').addEventListener('click',(e)=>{
 const experienceSection = document.querySelector('div.section-work .inner-container');
 const projectSection = document.querySelector('div.section-work .inner-container');
 
-fetch('../data/Experience.json').then(data => {
+fetch('https://myportfolio-nu64.onrender.com/').then(data => {
     if( data.statusText == 'OK'){
         return data.json();
     }
 }).then((data) => {
-    
-    setTimeout(()=>{
+        
         const property = "Experience";
         experienceSection.innerHTML = "<></>";
-        data.forEach((value, idx) => {
-            const card = new Cards(value.src, value.intro,value.id, property);
-            experienceSection.appendChild(card.get());
-        })
-    },2000)
+        if(typeof data.data !== 'string'){
+            data.data.forEach((value, idx) => {
+                const card = new Cards(value.src, value.intro,value.id, property);
+                experienceSection.appendChild(card.get());
+            })
+        }
+        
 }).catch(e =>  console.log(e.message));
 
 
