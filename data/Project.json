@@ -1,0 +1,25 @@
+[
+    {
+        "id" : 1,
+        "src" : "",
+        "intro" : " some basic stuff",
+        "details" : "falana dhimkana"
+    },
+     {
+        "id" : 2,
+        "src" : "",
+        "intro" : " some basic stuff",
+        "details" : "falana dhimkana"
+    },
+     {
+        "id" : 3,
+        "src" : "",
+        "intro" : " some basic stuff",
+        "details" : "falana dhimkana"
+    }, {
+        "id" : 4,
+        "src" : "",
+        "intro" : " some basic stuff",
+        "details" : "falana dhimkana"
+    }
+]
