@@ -16,8 +16,9 @@
 
 body{
     box-sizing: border-box;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    /* min-width: 445px; */
+    height: 100vh;
     padding: 0%;
     margin: 0%;
     overflow-x: hidden;
@@ -27,19 +28,26 @@ body{
     align-items: center;
     justify-content: center;
     position: relative;
-    height: 50vh;
+    min-height: 50vh;
+    max-height: fit-content;
     width: 100vw;
+    /* min-width: 445px; */
 }
 
 .inner-hero{
     width: 80%;
     height: 80%;
-    display: grid;    
-    grid-template-columns: 60% 30%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: left;
+    align-items: center;
+    /* display: grid;     */
+    /* grid-template-columns: 60% 30%; */
 }
-.hero-left-section{
+/* .hero-left-section{
     overflow: hidden; 
-}
+} */
 
 .hero-intro-head{
     font-size: 5vh;
