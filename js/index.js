@@ -49,17 +49,17 @@ class Cards{
         return this.#element;
     }
 }
-document.getElementById('toggleBulb').addEventListener('click',(e)=>{
-    let val = e.target.value;
-    if(val){
-        document.body.classList.remove('light')
-        document.body.classList.add('dark');
-    }else{
-        document.body.classList.remove('dark')
-         document.body.classList.add('light');
-    }
-    e.target.value = !val;
-})
+// document.getElementById('toggleBulb').addEventListener('click',(e)=>{
+//     let val = e.target.value;
+//     if(val){
+//         document.body.classList.remove('light')
+//         document.body.classList.add('dark');
+//     }else{
+//         document.body.classList.remove('dark')
+//          document.body.classList.add('light');
+//     }
+//     e.target.value = !val;
+// })
 const experienceSection = document.querySelector('div.section-work .inner-container');
 const projectSection = document.querySelector('div.section-projects .inner-container');
 
