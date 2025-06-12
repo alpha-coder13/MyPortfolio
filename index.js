@@ -16,16 +16,36 @@ server.on('request',(req,res)=>{
     return;
 });
 
+const pathParser = function (url){
+    const splitQuery = url.split("?");
+    const returnObj = {
+        path : "",
+        queries : {
+            _len : 0,
+        }
+    }
 
+    returnObj.path = splitQuery[0];
+
+    const queries = {};
+    splitQuery[1]?.split("&")?.forEach((value, idx) => {if(!value)return ;
+        let subVal = value.split('=');
+        queries[subVal[0]] = subVal[1];
+    } );
+    returnObj.queries = {...JSON.parse(JSON.stringify(queries)), _len: Object.keys(queries).length};
+
+    return returnObj;
+}
 function RequestHandler(req,res){
     const {readFile} = require('fs/promises');
     const {join} = require('path');
-    console.log(req.url);
-    switch(req.url){
+
+     const parsedPath = pathParser(req.url);
+
+    switch(parsedPath.path){
         case '/':{
             const filePath =join(__dirname,'data','About.json');
             const data = readFile(filePath,'utf-8');
-            
             data.then(data => {
                 data = JSON.parse(data);
                 res.writeHead(200,{'Content-Type':'application/json'});
