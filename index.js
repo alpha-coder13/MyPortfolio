@@ -63,7 +63,7 @@ function RequestHandler(req,res){
                 res.writeHead(404,{'Content-Type':'application/json'});
                 res.end(JSON.stringify({
                     data : "Not Found",
-                    error : "file not found",
+                    error : err.message,
                     paths : {
                         '/':"about me",
                         '/experience':"my experience",
@@ -80,13 +80,20 @@ function RequestHandler(req,res){
             data.then(data => {
                 data = JSON.parse(data);
                 res.writeHead(200,{'Content-Type':'application/json'});
+                if(parsedPath.queries._len>0){
+                    if(parseInt(parsedPath.queries.id)){
+                        data = data[parseInt(parsedPath.queries.id)-1] || {};
+                        data = [data];
+                    }
+                }
                 res.end(JSON.stringify({
                     data : data,
                     error : null,
                     paths : {
                         '/':"about me",
                         '/experience':"my experience",
-                        '/projects':"my projects"
+                        '/experience?id' : "experienceDetails",
+                        '/projects':"my projects",
                     }
                 }));
                 return;
@@ -94,7 +101,7 @@ function RequestHandler(req,res){
                 res.writeHead(404,{'Content-Type':'application/json'});
                 res.end(JSON.stringify({
                     data : "Not Found",
-                    error : "file not found",
+                    error : err.message,
                     paths : {
                         '/':"about me",
                         '/experience':"my experience",
@@ -109,8 +116,13 @@ function RequestHandler(req,res){
             const filePath =join(__dirname,'data','Project.json');
             const data = readFile(filePath,'utf-8');
             data.then(data => {
-                console.log(data);
                 data = JSON.parse(data);
+                if(parsedPath.queries._len>0){
+                    if(parseInt(parsedPath.queries.id)){
+                        data = data[parseInt(parsedPath.queries.id)-1] || {};
+                        data = [data];
+                    }
+                }
                 res.writeHead(200,{'Content-Type':'application/json'});
                 res.end(JSON.stringify({
                     data : data,
@@ -118,7 +130,8 @@ function RequestHandler(req,res){
                     paths : {
                         '/':"about me",
                         '/experience':"my experience",
-                        '/projects':"my projects"
+                        '/projects':"my projects",
+                        '/project?id' : "projectDetails",
                     }
                 }));
                 return;
@@ -126,7 +139,7 @@ function RequestHandler(req,res){
                 res.writeHead(404,{'Content-Type':'application/json'});
                 res.end(JSON.stringify({
                     data : "Not Found",
-                    error : "file not found",
+                    error : err.message,
                     paths : {
                         '/':"about me",
                         '/experience':"my experience",
