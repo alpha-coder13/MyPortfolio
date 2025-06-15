@@ -43,6 +43,8 @@ body{
     justify-content: left;
     align-items: center;
     padding-top: 1vh 1vw;
+    border: 2px solid;
+    border-radius: 7px;
 }
 
 
@@ -88,6 +90,9 @@ body{
     width: 19%;
     padding: 1vh;
     height: max-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .about-text{
     width: 80%;
@@ -97,6 +102,10 @@ body{
     min-height: 30vh;
     padding: 1vh;
     height: max-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .inner-container{
@@ -252,6 +261,9 @@ body{
     .hero-bg{
         background:  var(--hero-background-light);
     }
+    .inner-hero{
+        border-color: var(--text-light);
+    }
     .font-color{
         color: var(--text-light) !important;
     }
@@ -297,6 +309,9 @@ body{
 .dark{
     .hero-bg{
         background:  var(--hero-background-dark);
+    }
+    .inner-hero{
+        border-color: var(--text-dark);
     }
     .font-color{
         color: var(--text-dark) !important;
