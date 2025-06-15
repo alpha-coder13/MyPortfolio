@@ -42,12 +42,9 @@ body{
     flex-wrap: wrap;
     justify-content: left;
     align-items: center;
-    /* display: grid;     */
-    /* grid-template-columns: 60% 30%; */
+    padding-top: 1vh 1vw;
 }
-/* .hero-left-section{
-    overflow: hidden; 
-} */
+
 
 .hero-intro-head{
     font-size: 5vh;
