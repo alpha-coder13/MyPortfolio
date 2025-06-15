@@ -54,7 +54,7 @@ class Cards {
         let property = e.target.getAttribute('property');
         let id = e.target.id;
         console.log(property,id);
-        const getUrl = `http://127.0.0.1:3000/${property.toLowerCase()}?id=${parseInt(id)}`;
+        const getUrl = `https://myportfolio-nu64.onrender.com/${property.toLowerCase()}?id=${parseInt(id)}`;
         fetch(getUrl,{
             mode : 'cors',
         }).then((data) => data.json()).then((data)=>{
@@ -144,18 +144,6 @@ class Modal {
     }
 };
 
-document.getElementById('toggleBulb').addEventListener('click', (e) => {
-    let val = e.target.value;
-    if (val) {
-        document.body.classList.remove('light')
-        document.body.classList.add('dark');
-    } else {
-        document.body.classList.remove('dark')
-        document.body.classList.add('light');
-    }
-    e.target.value = !val;
-})
-}
 // document.getElementById('toggleBulb').addEventListener('click',(e)=>{
 //     let val = e.target.value;
 //     if(val){
@@ -187,7 +175,7 @@ fetch('https://myportfolio-nu64.onrender.com/experience', {
 
 }).catch(e => console.log(e.message));
 
-fetch('http://127.0.0.1:3000/projects', {
+fetch('https://myportfolio-nu64.onrender.com/projects', {
     mode: 'cors',
 }).then(data => {
     return data.json();
