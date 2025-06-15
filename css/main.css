@@ -171,7 +171,7 @@ body{
 
 
 .loader{
-    width: 50px;
+    width: 3vh;
     aspect-ratio: 1;
     border-radius: 50%;
     border: 8px solid;
@@ -273,7 +273,7 @@ body{
         box-shadow: 0 4px 30px rgba(0,0,0, 0.1);
     }
     .loader{
-          border-color: var(--text-light) var(--text-light);
+          border-color: var(--text-light) var(--text-dark);
     }
     .popup-background{
         background: rgba(0, 0, 0, 0.5);       
@@ -319,7 +319,7 @@ body{
          box-shadow: 0 4px 30px rgba(255, 253, 253, 0.1);
     }
     .loader{
-        border-color: var(--text-dark) var(--text-dark);
+        border-color: var(--text-dark) var(--text-light);
     }
     .popup-background{
        background: rgba(255, 255, 255, 0.7);
