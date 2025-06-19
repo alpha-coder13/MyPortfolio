@@ -272,7 +272,8 @@ function handleAboutData(data, contentDiv, imageDiv){
 
      const image = document.createElement('img');
         image.setAttribute('src', data.src);
-        imageDiv.innerHTML = image;
+        imageDiv.innerHTML = "";
+        imageDiv.appendChild(image);
         return ;
     
 }
