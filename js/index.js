@@ -31,8 +31,8 @@ class Cards {
         return imageDiv;
     }
     static #createTextSpan(cardContentText) {
-        const textSpan = document.createElement('p');
-        // textSpan.classList.add(...['card-content-text']);
+        const textSpan = document.createElement('span');
+        textSpan.classList.add(...['card-content-text']);
         textSpan.innerText = cardContentText;
         return textSpan;
     }
@@ -106,7 +106,7 @@ class Modal {
             headerText.innerText = "Description";
             content.appendChild(headerText);
 
-            const textSpan = document.createElement('span');
+            const textSpan = document.createElement('p');
             textSpan.innerText = modalContentDesc;
 
             content.appendChild(textSpan);
@@ -120,7 +120,7 @@ class Modal {
             const list = document.createElement('ul');
             list.setAttribute('type', 'disc');
 
-            for (let a of modalContentContributions) {
+            for (let a in modalContentContributions) {
                 const listItem = document.createElement('li');
                 listItem.innerText = a;
                 list.appendChild(listItem);
