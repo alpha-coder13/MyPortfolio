@@ -213,8 +213,8 @@ fetch('https://myportfolio-nu64.onrender.com/', {
     const imageDiv = aboutSection.querySelector(' .about-image');
     imageDiv.classList.remove('justify-content-center', 'align-items-center');
 
-    if (typeof data === 'object') {
-        handleAboutData(data, contentDiv, imageDiv);
+    if (typeof data.data === 'object') {
+        handleAboutData(data.data, contentDiv, imageDiv);
     } else {
         contentDiv.innerHTML("Nothing to Show Here");
     }
