@@ -107,7 +107,6 @@ class Modal {
             content.appendChild(headerText);
 
             const textSpan = document.createElement('span');
-            textSpan.classList.add(...['card-content-text']);
             textSpan.innerText = modalContentDesc;
 
             content.appendChild(textSpan);
@@ -121,7 +120,7 @@ class Modal {
             const list = document.createElement('ul');
             list.setAttribute('type', 'disc');
 
-            for (let a in modalContentContributions) {
+            for (let a of modalContentContributions) {
                 const listItem = document.createElement('li');
                 listItem.innerText = a;
                 list.appendChild(listItem);
