@@ -103,10 +103,12 @@ class Modal {
         content.classList.add('modal-body');
         if (modalContentDesc) {
             const headerText = document.createElement('h2');
+            headerText.classList.add('font-color');
             headerText.innerText = "Description";
             content.appendChild(headerText);
 
             const textSpan = document.createElement('p');
+            textSpan.classList.add('font-color');
             textSpan.innerText = modalContentDesc;
 
             content.appendChild(textSpan);
@@ -114,11 +116,13 @@ class Modal {
 
         if (modalContentContributions && modalContentContributions.length) {
             const headerText = document.createElement('h2');
+            headerText.classList.add('font-color');
             headerText.innerText = "Contributions";
             content.appendChild(headerText);
 
             const list = document.createElement('ul');
             list.setAttribute('type', 'disc');
+            list.classList.add('font-color');
 
             for (let a of modalContentContributions) {
                 const listItem = document.createElement('li');
