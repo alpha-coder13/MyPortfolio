@@ -162,6 +162,8 @@ class Modal {
 // })
 const experienceSection = document.querySelector('div.section-work .inner-container');
 const projectSection = document.querySelector('div.section-projects .inner-container');
+const aboutSection = document.querySelector('div.section-about .inner-container-about');
+
 
 fetch('https://myportfolio-nu64.onrender.com/experience', {
     mode: 'cors',
@@ -200,11 +202,77 @@ fetch('https://myportfolio-nu64.onrender.com/projects', {
 }).catch(e => console.log(e.message));
 
 
+fetch('https://myportfolio-nu64.onrender.com/about', {
+    mode: 'cors',
+}).then(data => {
+    return data.json();
+}).then((data) => {
+    const contentDiv = aboutSection.querySelector(' .about-text');
+    contentDiv.innerHTML = "";
+    const imageDiv = aboutSection.querySelector(' .about-image');
+    if (typeof data === 'object') {
+        handleAboutData(data, contentDiv, imageDiv);
+    } else {
+        contentDiv.innerHTML("Nothing to Show Here");
+    }
+
+}).catch(e => console.log(e.message));
+
+
+
 // const handleOnclick = () => {
 
 // }
 
+function handleAboutData(data, contentDiv, imageDiv){
+    const introText = data.intro;
+    const frameWorks = data.tech_stack;
+    const hobbies =  data.hobbies;
+    const textSpan = document.createElement('p');
+    textSpan.classList.add('font-color');
+    textSpan.innerText = introText;
 
+    contentDiv.appendChild(textSpan);
+
+    Object.entries(frameWorks).forEach((value, idx)=>{
+         const headerText = document.createElement('b');
+            headerText.classList.add('font-color');
+            headerText.innerText = value[0].toUpperCase();
+            contentDiv.appendChild(headerText);
+
+            const list = document.createElement('ul');
+            list.setAttribute('type', 'disc');
+            list.classList.add('font-color');
+
+            for (let a of value[1]) {
+                const listItem = document.createElement('li');
+                listItem.innerText = a;
+                list.appendChild(listItem);
+            }
+        contentDiv.appendChild(list);
+    })
+
+     const headerText = document.createElement('b');
+        headerText.classList.add('font-color');
+        headerText.innerText = "Hobbies...";
+        contentDiv.appendChild(headerText); 
+    const list = document.createElement('ul');
+        list.setAttribute('type', 'disc');
+        list.classList.add('font-color' );
+
+    for (let a of hobbies) {
+        const listItem = document.createElement('li');
+        listItem.innerText = a;
+        list.appendChild(listItem);
+    }
+        contentDiv.appendChild(list);
+
+     const image = document.createElement('img');
+        image.setAttribute('src', data.src);
+        imageDiv.innerHTML = image;
+        return ;
+    
+}
 
 function toggleTheme() {
     const body = document.body;
