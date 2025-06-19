@@ -1,13 +1,13 @@
 :root{
     --background-dark : black;
-    --background-dark-transperant : rgba(0,0,0,0.7);
+    --background-dark-transperant : rgba(0,0,0,0.5);
     --text-dark : white;
     --clip-background-dark : linear-gradient(to right , #66cc00, #cccc00);
     --button-dark : #66cc00;
     --hero-background-dark : #1a1f14;
     --button-dark-text : black ;
     --background-light : white;
-    --background-light-transperant : rgba(255,255,255,0.7);
+    --background-light-transperant : rgba(255,255,255,0.5);
     --text-light : Black;
     --clip-background-light : linear-gradient(to right , #0039e6, #6600cc);
     --button-light : #0039e6;
@@ -208,6 +208,8 @@ body{
     height: 5vh;
     padding: 3% 2% 3% 5%;
     position: absolute;
+    border-radius: 5px;
+
 }
 
 .modal-header-text{
@@ -222,6 +224,7 @@ body{
     flex-direction: column;
     width: 90%;
     padding: 5%;
+    padding-top: calc(5vh + 3%);
 }
 
 
@@ -304,6 +307,7 @@ body{
         background: var(--background-light-transperant);
         backdrop-filter: blur(20px);
          -webkit-backdrop-filter: blur(20px);
+         box-shadow: 0px 0px 20px 6px rgba(255, 253, 253, 0.5);
     }
 }
 
@@ -358,5 +362,7 @@ body{
         background: var(--background-dark-transperant);
         backdrop-filter: blur(20px);
          -webkit-backdrop-filter: blur(20px);
+         box-shadow: 0px 0px 20px 6px rgba(0,0,0, 0.1);
+
     }
 }

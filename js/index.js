@@ -85,9 +85,9 @@ class Modal {
     }
     static #createHeader(headerText) {
         const header = document.createElement('div');
-        header.classList.add('modal-header');
+        header.classList.add('modal-header','transperant-bg-header');
         const headerTextele = document.createElement('div');
-        headerTextele.classList.add('font-color', 'modal-header-text','transperant-bg-header');
+        headerTextele.classList.add('font-color', 'modal-header-text');
         headerTextele.innerText = headerText;
         const closeCTA = document.createElement('div');
         closeCTA.classList.add('close-cta', 'font-color');
