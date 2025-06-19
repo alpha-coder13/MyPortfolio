@@ -1,4 +1,3 @@
-const popupModal = document.getElementById('popup-modal');
 
 class Cards {
     #id;
@@ -54,6 +53,8 @@ class Cards {
         let property = e.target.getAttribute('property');
         let id = e.target.id;
         console.log(property, id);
+        let popupModal = document.getElementById('popup-modal');
+        popupModal.innerHTML = "";
         const getUrl = `https://myportfolio-nu64.onrender.com/${property.toLowerCase()}?id=${parseInt(id)}`;
         fetch(getUrl, {
             mode: 'cors',
