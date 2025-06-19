@@ -1,1 +1,64 @@
-"hello"
+{
+    "src": "https://github.com/alpha-coder13/MyPortfolio/blob/Vanilla/js/profileImage.jpeg?raw=true",
+    "intro": "I am a B.Tech graduate in Computer Science and Engineering from IIIT Ranchi with strong hands-on experience as a Full Stack Developer. I currently work as a Software Engineer at IndiaMART, where I’ve contributed to high-impact projects like React-NodeJS migrations, SSR, and performance optimizations that significantly improved user experience and site metrics. I’ve also explored Web3, smart contract development, and contributed to blockchain-based applications during my internships. My interests include Blockchain, Web3, AI/ML, Cybersecurity, and System Design — and I continue to explore and grow in these domains.",
+    "tech_stack": {
+        "languages": [
+            "JavaScript",
+            "TypeScript",
+            "Python",
+            "C++",
+            "Java",
+            "PHP",
+            "Shell",
+            "Bash",
+            "Solidity",
+            "SQL"
+        ],
+        "frontend": [
+            "ReactJS",
+            "HTML",
+            "CSS",
+            "Bootstrap",
+            "Tailwind",
+            "Next.js",
+            "Webpack"
+        ],
+        "backend": [
+            "NodeJS",
+            "ExpressJS",
+            "Django",
+            "Apache",
+            "CI/CD"
+        ],
+        "database_tools": [
+            "MongoDB",
+            "MySQL",
+            "SQLite3 (Django)"
+        ],
+        "web3_frameworks": [
+            "web3.js",
+            "Ethers.js",
+            "Truffle",
+            "Hardhat"
+        ],
+        "testing_tools": [
+            "Jest"
+        ],
+        "dev_tools": [
+            "Babel",
+            "ESLint"
+        ],
+        "other_skills": [
+            "Redux",
+            "REST APIs",
+            "Smart Contract Auditing",
+            "System Design",
+            "Scrum"
+        ]
+    },
+    "hobbies": [
+        "Badminton",
+        "Football",
+        "Esports"
+    ]
+}
