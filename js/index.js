@@ -31,8 +31,8 @@ class Cards {
         return imageDiv;
     }
     static #createTextSpan(cardContentText) {
-        const textSpan = document.createElement('span');
-        textSpan.classList.add(...['card-content-text']);
+        const textSpan = document.createElement('p');
+        // textSpan.classList.add(...['card-content-text']);
         textSpan.innerText = cardContentText;
         return textSpan;
     }
