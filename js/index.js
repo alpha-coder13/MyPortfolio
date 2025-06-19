@@ -76,7 +76,7 @@ class Modal {
 
     constructor(headerText, modalContentDesc, modalContentContributions) {
         const mainDiv = document.createElement('div');
-        mainDiv.classList.add("modal", "modal-bg");
+        mainDiv.classList.add("modal", "modal-bg","d-flex");
         const header = Modal.#createHeader(headerText);
         mainDiv.appendChild(header);
         const content = Modal.#createContent(modalContentDesc, modalContentContributions);
