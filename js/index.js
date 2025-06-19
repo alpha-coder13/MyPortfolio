@@ -59,6 +59,7 @@ class Cards {
             mode : 'cors',
         }).then((data) => data.json()).then((data)=>{
             data = data.data;
+            if(data ) data = data[0];
             const modal = new Modal(data.title,data.description , data.contributions);
             popupModal.appendChild(modal.get())
             popupModal.classList.add('display-popup');
