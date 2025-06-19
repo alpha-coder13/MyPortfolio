@@ -120,7 +120,7 @@ class Modal {
             const list = document.createElement('ul');
             list.setAttribute('type', 'disc');
 
-            for (let a in modalContentContributions) {
+            for (let a of modalContentContributions) {
                 const listItem = document.createElement('li');
                 listItem.innerText = a;
                 list.appendChild(listItem);
