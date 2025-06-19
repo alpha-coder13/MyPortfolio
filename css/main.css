@@ -205,6 +205,13 @@ body {
     animation: l1 1s infinite;
 }
 
+.close-cta{
+    position: absolute;
+    top: 0.1vh;
+    right: 1.1vw;
+
+}
+
 @keyframes l1 {
     to {
         transform: rotate(.5turn)
@@ -269,7 +276,7 @@ body {
     justify-content: space-between;
     /* height: 5vh; */
     padding: 3% 2% 3% 5%;
-    /* position: absolute; */
+    position: relative;
     border-radius: 5px;
     z-index: 2;
 
