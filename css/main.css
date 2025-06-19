@@ -243,7 +243,10 @@ body {
     .cards{
         width: 80vw !important;
         height: max-content;
-        
+        display: flex!important;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
     }
 
 }
