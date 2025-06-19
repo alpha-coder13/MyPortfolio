@@ -240,6 +240,12 @@ body {
         width: 100%;
     }
 
+    .cards{
+        width: 80vw !important;
+        height: max-content;
+        
+    }
+
 }
 .modal {
     height: 80vh;
