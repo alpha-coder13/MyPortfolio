@@ -63,7 +63,7 @@ class Cards {
             if (data) data = data[0];
             const modal = new Modal(data.title, data.description, data.contributions);
             popupModal.appendChild(modal.get())
-            popupModal.classList.add('display-popup');
+            !popupModal.classList.contains('display-popup') && popupModal.classList.add('display-popup');
         })
 
     }
