@@ -1,25 +1,61 @@
 [
-    {
-        "id" : 1,
-        "src" : "",
-        "intro" : " some basic stuff",
-        "details" : "falana dhimkana"
-    },
-     {
-        "id" : 2,
-        "src" : "",
-        "intro" : " some basic stuff",
-        "details" : "falana dhimkana"
-    },
-     {
-        "id" : 3,
-        "src" : "",
-        "intro" : " some basic stuff",
-        "details" : "falana dhimkana"
-    }, {
-        "id" : 4,
-        "src" : "",
-        "intro" : " some basic stuff",
-        "details" : "falana dhimkana"
-    }
+  {
+    "id": 1,
+    "src": "",
+    "intro": "Working as a Software Engineer at IndiaMART, focusing on performance, scalability, and frontend architecture improvements.",
+    "description": "Led key frontend migrations from PHP to React, implemented server-side rendering, and collaborated cross-functionally to enhance user experience and system performance. Involved in both frontend and backend enhancements to drive engagement and operational efficiency.",
+    "title": "Software Engineer - IndiaMART",
+    "contributions": [
+      "Implemented Server Side Rendering with React and NodeJS, improving indexability and organic traffic by 5%",
+      "Increased valid fill rate for mobile site enquiries by 10% via auto data enrichment",
+      "Migrated legacy PHP modules to React and NodeJS, improving CLS by 88% and INP by 30%",
+      "Built class-based middleware in PHP to abstract login services",
+      "Designed rate limiter to block spam account creation (~12,000 users reduced)",
+      "Engineered a JS versioning system saving ~2 hours weekly by removing inter-team dependency",
+      "Reduced JS errors from 6,000 to 1,280 by optimizing and refactoring",
+      "Collaborated on centralized login popup to enable foreign login and OTP email verification",
+      "Enabled WebView support in Android for mobile message journeys",
+      "Led implementation of Google's one-click unsubscribe in promotional emails",
+      "Integrated sentiment analysis using HuggingFace BERT for tone/intent recognition",
+      "Automated production React build pipeline and setup test servers"
+    ]
+  },
+  {
+    "id": 2,
+    "src": "",
+    "intro": "Worked as a Software Engineering Intern at IndiaMART contributing to product usability and UI stability.",
+    "description": "Improved UI performance and user engagement by designing widgets and optimizing legacy systems. Focused on scalable features and component reusability using PHP and React.",
+    "title": "Software Engineering Intern - IndiaMART",
+    "contributions": [
+      "Developed Dashboard Module widget, improving engagement by 10%",
+      "Implemented infinite scroll in PHP for Ratings page rolled out to 100% of users",
+      "Resolved ~70% of UI bug tickets by systematically closing outstanding issues"
+    ]
+  },
+  {
+    "id": 3,
+    "src": "",
+    "intro": "Interned in R&D at CoantumLeap, where you built decentralized applications and handled smart contract audits.",
+    "description": "Created a scalable DAO application using MERN stack. Reviewed and deployed smart contracts using Solidity with end-to-end integration between frontend and Ethereum-based blockchain.",
+    "title": "R&D Intern - CoantumLeap",
+    "contributions": [
+      "Designed and developed full-stack DAO app for 10,000+ users",
+      "Built using MERN stack and deployed via Heroku and Vercel",
+      "Audited Solidity smart contracts and deployed via Remix IDE and MetaMask",
+      "Used Ethers.js to integrate frontend with smart contracts"
+    ]
+  },
+  {
+    "id": 4,
+    "src": "",
+    "intro": "Authored a research paper analyzing blockchain limitations and consensus algorithms under academic guidance.",
+    "description": "Reviewed over 25 research papers to understand emerging consensus mechanisms in blockchain. Compared popular algorithms and highlighted future research directions for scalability and security.",
+    "title": "Blockchain Research Paper - IIIT Ranchi",
+    "contributions": [
+      "Authored a research paper on blockchain consensus mechanisms",
+      "Reviewed 25+ academic papers to study recent blockchain developments",
+      "Compared popular consensus algorithms and explored future improvements",
+      "Published under the guidance of Dr. Bam Bahadur Sinha at IIIT Ranchi"
+    ]
+  }
 ]
