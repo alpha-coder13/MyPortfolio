@@ -202,14 +202,17 @@ fetch('https://myportfolio-nu64.onrender.com/projects', {
 }).catch(e => console.log(e.message));
 
 
-fetch('https://myportfolio-nu64.onrender.com/about', {
+fetch('https://myportfolio-nu64.onrender.com/', {
     mode: 'cors',
 }).then(data => {
     return data.json();
 }).then((data) => {
     const contentDiv = aboutSection.querySelector(' .about-text');
+    contentDiv.classList.remove('justify-content-center', 'align-items-center');
     contentDiv.innerHTML = "";
     const imageDiv = aboutSection.querySelector(' .about-image');
+    imageDiv.classList.remove('justify-content-center', 'align-items-center');
+
     if (typeof data === 'object') {
         handleAboutData(data, contentDiv, imageDiv);
     } else {
