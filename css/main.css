@@ -249,6 +249,10 @@ body {
         justify-content: space-evenly;
     }
 
+    .modal{
+        width: 80vw !important;
+    }
+
 }
 .modal {
     height: 80vh;
@@ -265,7 +269,7 @@ body {
     justify-content: space-between;
     /* height: 5vh; */
     padding: 3% 2% 3% 5%;
-    position: absolute;
+    /* position: absolute; */
     border-radius: 5px;
     z-index: 2;
 
