@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <!-- <meta http-equiv="refresh" content="1"></meta> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/main.css?v=4">
 </head>
+
 <body class="body-bg light">
     <!-- <header> This is my website</header> -->
     <!-- <h1>This will be my hero section</h1> -->
@@ -24,15 +28,17 @@
                </div>
         </div> -->
     </div>
-     <div id="hero" class="hero-section hero-bg ">
+    <div id="hero" class="hero-section hero-bg ">
         <div class="inner-hero">
-                <p class="hero-intro-head font-color "> Hi! I am Amardeep Saha, a <span class="cliptext-bg background-clip-text">Software Developer</span></p>
-                <p class="hero-intro-body font-color "> I code , I read, I play , I lift and the best part is ...  I touch grass</p>
+            <p class="hero-intro-head font-color "> Hi! I am Amardeep Saha, a <span
+                    class="cliptext-bg background-clip-text">Software Developer</span></p>
+            <p class="hero-intro-body font-color "> I code , I read, I play , I lift and the best part is ... I touch
+                grass</p>
         </div>
-     </div>
+    </div>
     <!-- if hero exists page , I will bring out the nav pane-->
-     <!-- <nav> GOTOP  | WORK EXP | PROJECTS | CONTACT ME</nav> -->
-     <div class="section-about">
+    <!-- <nav> GOTOP  | WORK EXP | PROJECTS | CONTACT ME</nav> -->
+    <div class="section-about">
         <h1 class="font-color hero-intro-head">About me</h1>
         <div class="inner-container-about content-container-style font-color ">
             <div class="about-image">
@@ -46,8 +52,8 @@
     <div class="section-work">
         <h1 class="font-color hero-intro-head">Work and Experience</h1>
         <div class="inner-container">
-        <div class="loader"></div>
-         <!-- 
+            <div class="loader"></div>
+            <!-- 
          <div class = "cards content-container-style ">
             <div class = "card-image">
                 <img src="./sss" width="100%" height="100%" style="border: 0px; border-top-right-radius: 16px;border-top-left-radius: 16px;"></img>
@@ -64,12 +70,85 @@
     <div class="section-projects">
         <h1 class="font-color hero-intro-head">Projects</h1>
         <div class="inner-container ">
-         <div class="loader"></div>
-         
+            <div class="loader"></div>
+
         </div>
     </div>
     <div class="section-about">
-        <h1 class="font-color hero-intro-head">Contact Me</h1>
+        <!-- <h1 class="font-color hero-intro-head">Contact Me</h1> -->
+        <div class="main-container">
+            <div class="contact-container">
+                <h1 class="main-title">Get In Touch</h1>
+
+                <div class="column-container">
+                    <!-- Messaging Column -->
+                    <div class="messaging-column">
+                        <h3 class="section-title">
+                            <i class="fas fa-envelope"></i>
+                            Send Message
+                        </h3>
+
+                        <form class="contact-form" onsubmit="handleSubmit(event)">
+                            <input type="text" class="form-control" placeholder="Your Name" name="name" required>
+
+                            <input type="email" class="form-control" placeholder="Your Email" name="email" required>
+
+                            <textarea class="form-control" placeholder="Your Message" name="content"
+                                required></textarea>
+
+                            <button type="submit" class="btn-send">
+                                <i class="fas fa-paper-plane"></i>
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Section Divider -->
+                    <div class="section-divider"></div>
+
+                    <!-- Social Column -->
+                    <div class="social-column">
+                        <h3 class="section-title">
+                            <i class="fas fa-share-alt"></i>
+                            Connect With Me
+                        </h3>
+
+                        <p class="social-description">
+                            Follow me on social media and check out my work!
+                        </p>
+
+                        <div class="social-buttons">
+                            <a href="#" class="social-btn" onclick="openSocial('GitHub')" title="GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="#" class="social-btn" onclick="openSocial('LeetCode')" title="LeetCode">
+                                <i class="fas fa-code"></i>
+                            </a>
+                            <a href="#" class="social-btn" onclick="openSocial('LinkedIn')" title="LinkedIn">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                        </div>
+
+                        <div class="social-info">
+                            <h5>Find me on:</h5>
+                            <div class="social-item">
+                                <i class="fab fa-github"></i>
+                                <span>@yourusername</span>
+                            </div>
+                            <div class="social-item">
+                                <i class="fas fa-code"></i>
+                                <span>LeetCode Profile</span>
+                            </div>
+                            <div class="social-item">
+                                <i class="fab fa-linkedin-in"></i>
+                                <span>LinkedIn Profile</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <!-- <div class="inner-container content-container-style font-color ">
             sajcwqmdsaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaasajcwqmdsaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaasajcwqmdsaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaasajcwqmdsaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaasajcwqmdsaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaasajcwqmdsaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaasajcwqmdsaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaasajcwqmdsaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaasajcwqmdsaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaasajcwqmdsaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaasajcwqmdsaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaasajcwqmdsaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaasajcwqmdsaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaasajcwqmdsaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
         </div> -->
@@ -79,5 +158,6 @@
         <p class="font-color "> Made with ❤️ by <span class="cliptext-bg background-clip-text ">Amardeep Saha</span></p>
     </div>
 </body>
-<script src="./js/index.js?v=2.4.0" ></script>
-</html>modal-body
+<script src="./js/index.js?v=2.4.0"></script>
+
+</html>
