@@ -4,7 +4,7 @@ class Cards {
     #id;
     #property;
     #element;
-    constructor(cardImageSrc, cardContentText, id, property,onclickHandler) {
+    constructor(cardImageSrc, cardContentText, id, property, onclickHandler) {
         const mainDiv = document.createElement('div');
         mainDiv.classList.add(...['cards', 'content-container-style']);
         const imageDiv = Cards.#createImageEle(cardImageSrc);
@@ -50,17 +50,17 @@ class Cards {
         return this.#element;
     }
 
-    static #handleButtonClick(e){
+    static #handleButtonClick(e) {
         let property = e.target.getAttribute('property');
         let id = e.target.id;
-        console.log(property,id);
+        console.log(property, id);
         const getUrl = `https://myportfolio-nu64.onrender.com/${property.toLowerCase()}?id=${parseInt(id)}`;
-        fetch(getUrl,{
-            mode : 'cors',
-        }).then((data) => data.json()).then((data)=>{
+        fetch(getUrl, {
+            mode: 'cors',
+        }).then((data) => data.json()).then((data) => {
             data = data.data;
-            if(data ) data = data[0];
-            const modal = new Modal(data.title,data.description , data.contributions);
+            if (data) data = data[0];
+            const modal = new Modal(data.title, data.description, data.contributions);
             popupModal.appendChild(modal.get())
             popupModal.classList.add('display-popup');
         })
@@ -85,7 +85,7 @@ class Modal {
     }
     static #createHeader(headerText) {
         const header = document.createElement('div');
-        header.classList.add('modal-header','transperant-bg-header');
+        header.classList.add('modal-header', 'transperant-bg-header');
         const headerTextele = document.createElement('div');
         headerTextele.classList.add('font-color', 'modal-header-text');
         headerTextele.innerText = headerText;
@@ -201,3 +201,17 @@ fetch('https://myportfolio-nu64.onrender.com/projects', {
 
 
 
+function toggleTheme() {
+    const body = document.body;
+    const themeIcon = document.getElementById('theme-icon');
+
+    if (body.classList.contains('light')) {
+        body.classList.remove('light');
+        body.classList.add('dark');
+        themeIcon.className = 'fas fa-sun';
+    } else {
+        body.classList.remove('dark');
+        body.classList.add('light');
+        themeIcon.className = 'fas fa-moon';
+    }
+}
