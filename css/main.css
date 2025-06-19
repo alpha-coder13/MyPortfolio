@@ -134,6 +134,7 @@ body {
     text-align: center;
     overflow: hidden;
     overflow-wrap: break-word;
+    margin-top: 1vh;
     /* font-size: 2vh; */
 }
 
@@ -252,7 +253,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 5vh;
+    /* height: 5vh; */
     padding: 3% 2% 3% 5%;
     position: absolute;
     border-radius: 5px;
