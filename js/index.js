@@ -20,13 +20,14 @@ class Cards {
 
     static #createImageEle(cardImageSrc) {
         const imageDiv = document.createElement('div');
-        imageDiv.classList.add(...["card-image"]);
-        const imageEle = document.createElement('img');
-        imageEle.src = cardImageSrc;
-        imageEle.width = "100%";
-        imageEle.height = "100%";
-        imageEle.style = "border: 0px; border-top-right-radius: 16px;border-top-left-radius: 16px;"
-        imageDiv.appendChild(imageEle);
+        imageDiv.classList.add(...["card-image","mt-2"]);
+        imageDiv.style.background = `url('${cardImageSrc}')`
+        // const imageEle = document.createElement('img');
+        // imageEle.src = cardImageSrc;
+        // imageEle.width = "100%";
+        // imageEle.height = "100%";
+        // imageEle.style = "border: 0px; border-top-right-radius: 16px;border-top-left-radius: 16px;"
+        // imageDiv.appendChild(imageEle);
         return imageDiv;
     }
     static #createTextSpan(cardContentText) {

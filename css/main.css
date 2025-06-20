@@ -27,7 +27,7 @@ body {
     margin: 0%;
     overflow-x: hidden;
     overscroll-behavior-y: contain;
-    overscroll-behavior-x:contain;
+    overscroll-behavior-x: contain;
 }
 
 .hero-section {
@@ -96,7 +96,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    padding: 2px;
+    padding: 2vh 3vw;
     transition: all 0.4s ease-in-out;
     /* font-size: 2vh; */
 }
@@ -110,8 +110,8 @@ body {
     justify-content: center;
 }
 
-.about-image img{
-            height: calc(0.8* 50vh);
+.about-image img {
+    height: calc(0.8* 50vh);
     /* width: 22vw; */
     border-radius: 5px;
     /* transform: scale(1); */
@@ -119,19 +119,20 @@ body {
 }
 
 .about-text {
-    width: 55%;
+    width: 60%;
     overflow-wrap: break-word;
     overflow-x: hidden;
     overflow-y: auto;
     min-height: 30vh;
     padding: 1vh;
     max-height: 50vh;
-    display: flex
-;
+    display: flex;
     flex-direction: column;
+    text-align: justify;
     /* align-items: center; */
     /* justify-content: center;*/
 }
+
 .section-about li {
     float: left;
     margin-right: 4vw;
@@ -167,6 +168,8 @@ body {
     width: 100%;
     border-radius: 16px;
     border: 0px solid gray;
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 
 .card-content {
@@ -219,7 +222,7 @@ body {
     animation: l1 1s infinite;
 }
 
-.close-cta{
+.close-cta {
     position: absolute;
     top: 0.1vh;
     right: 1.1vw;
@@ -232,59 +235,73 @@ body {
     }
 }
 
-.gtch{
+.gtch {
     transition: all 0.4s;
 }
 
-.messaging-column{
+.messaging-column {
     width: 50%;
 }
 
- @media (width <= 750px){
+@media (width <=750px) {
     .section-divider {
         height: 0vh !important;
         width: 80vw !important;
-        border-left: 0px solid ;
+        border-left: 0px solid;
     }
-    .gtch{
-        
+
+    .gtch {
+
         flex-direction: column;
     }
-    .messaging-column{
+
+    .messaging-column {
         width: 100%;
     }
+
     .inner-container-about {
         flex-direction: column;
     }
 
 
-    .about-image, .about-text{
+    .about-image,
+    .about-text {
         width: 100% !important;
-        
-    }
-    .about-image{
-        height: max-content !important;
-    }
-    .about-text{
-        height: 70vh!important;
+
     }
 
-    .cards{
+    .about-image {
+        height: max-content !important;
+    }
+
+    .about-text {
+        height: 70vh !important;
+        margin-top: 2vh;
+    }
+
+    .cards {
         width: 80vw !important;
         height: max-content;
-        display: flex!important;
+        display: flex !important;
         flex-direction: column;
         align-items: center;
         justify-content: space-evenly;
     }
 
-    .modal{
+    .modal {
         width: 80vw !important;
     }
 
+    .card-button {
+        width: auto;
+    }
 
+    .card-image{
+        height: 30vh;
+    }
 
 }
+
 .modal {
     height: 80vh;
     width: 60vw;
@@ -435,7 +452,8 @@ body {
         }
     }
 
-    input::placeholder, textarea::placeholder {
+    input::placeholder,
+    textarea::placeholder {
         color: var(--text-light);
     }
 
@@ -470,9 +488,10 @@ body {
         height: 45vh;
         border-left: 2px solid var(--button-light);
     }
-      @media (width <= 750px){
+
+    @media (width <=750px) {
         .section-divider {
-            border-top:2px solid var(--button-light)!important;
+            border-top: 2px solid var(--button-light) !important;
         }
     }
 }
@@ -560,7 +579,8 @@ body {
         }
     }
 
-    input::placeholder, textarea::placeholder {
+    input::placeholder,
+    textarea::placeholder {
         color: var(--text-dark) !important;
     }
 
@@ -596,14 +616,14 @@ body {
         border-left: 2px solid var(--button-dark);
     }
 
-    @media (width <= 750px){
+    @media (width <=750px) {
         .section-divider {
-            border-top:2px solid var(--button-dark)!important;
+            border-top: 2px solid var(--button-dark) !important;
         }
     }
 }
 
-.theme-toggle{
+.theme-toggle {
     position: fixed;
     top: 5px;
     right: 5px;
@@ -620,6 +640,6 @@ body {
     border: 0px solid;
 }
 
-.theme-toggle:hover{
+.theme-toggle:hover {
     transform: rotateZ(180deg);
 }
