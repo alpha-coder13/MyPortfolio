@@ -102,7 +102,7 @@ body {
 }
 
 .about-image {
-    width: 19%;
+    /* width: 19%; */
     padding: 1vh;
     height: max-content;
     display: flex;
