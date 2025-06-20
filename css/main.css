@@ -168,8 +168,9 @@ body {
     width: 100%;
     border-radius: 16px;
     border: 0px solid gray;
-    background-repeat: no-repeat;
-    background-size: contain;
+    background-repeat: no-repeat !important;
+    background-size: contain !important;
+    background-position: center !important;
 }
 
 .card-content {
@@ -296,7 +297,7 @@ body {
         width: auto;
     }
 
-    .card-image{
+    .card-image {
         height: 30vh;
     }
 
