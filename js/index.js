@@ -1,4 +1,14 @@
 
+const debounceFunction  = (fn) => {
+    let called ;
+    return function(...args){
+        if(called){
+            clearTimeout(called);
+        }
+        called = setTimeout(fn.apply(this,...args));
+    }
+}
+
 class Cards {
     #id;
     #property;
@@ -42,7 +52,8 @@ class Cards {
         buttonCard.innerText = "Know More →";
         buttonCard.setAttribute('id', id);
         buttonCard.setAttribute('property', property);
-        buttonCard.addEventListener('click', (e) => { e.preventDefault(), onclickHandler || Cards.#handleButtonClick(e) })
+        const onclickDebounced  = debounceFunction(onclickHandler || Cards.#handleButtonClick);
+        buttonCard.addEventListener('click', (e) => { e.preventDefault(), onclickDebounced(e) })
         return buttonCard;
     }
 
