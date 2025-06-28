@@ -53,7 +53,7 @@ class Cards {
         buttonCard.setAttribute('id', id);
         buttonCard.setAttribute('property', property);
         const onclickDebounced  = debounceFunction(onclickHandler || Cards.#handleButtonClick);
-        buttonCard.addEventListener('click', (e) => { e.preventDefault(), onclickDebounced(e) })
+        buttonCard.addEventListener('click', (e) => { e.preventDefault(), onclickDebounced([e]) })
         return buttonCard;
     }
 
