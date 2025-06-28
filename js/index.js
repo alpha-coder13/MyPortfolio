@@ -5,7 +5,7 @@ const debounceFunction  = (fn) => {
         if(called){
             clearTimeout(called);
         }
-        called = setTimeout(fn.apply(this,...args));
+        called = setTimeout(()=>fn.apply(this,...args), 1200);
     }
 }
 
