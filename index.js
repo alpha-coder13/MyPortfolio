@@ -1,6 +1,7 @@
 const http =require('http');
 const path = require('path');
-require('process').loadEnvFile(path.join(process.cwd(),'.env'));
+// require('process').loadEnvFile(path.join(process.cwd(),'.env'));
+require('dotenv').config({path:path.join(process.cwd(),'.env')});
 
 const server_assets = http.createServer();
 const server_messages = http.createServer();
