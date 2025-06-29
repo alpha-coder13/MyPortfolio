@@ -9,11 +9,31 @@ const debounceFunction  = (fn) => {
     }
 }
 
+function handleButtonClickCards(event) {
+     let property = event.target.getAttribute('property');
+     let id = event.target.id;
+     console.log(property, id);
+     let popupModal = document.getElementById('popup-modal');
+     popupModal.innerHTML = "";
+    const getUrl = `https://myportfolio-nu64.onrender.com/${property.toLowerCase()}?id=${parseInt(id)}`;
+    fetch(getUrl, {
+        mode: 'cors',
+    }).then((data) => data.json()).then((data) => {
+        data = data.data;
+        if (data) data = data[0];
+        const modal = new Modal(data.title, data.description, data.contributions);
+        popupModal.appendChild(modal.get())
+        !popupModal.classList.contains('display-popup') && popupModal.classList.add('display-popup');
+    })
+}
+
+const deboouncedClickCards  = debounceFunction(handleButtonClickCards);
+
 class Cards {
     #id;
     #property;
     #element;
-    constructor(cardImageSrc, cardContentText, id, property, onclickHandler) {
+    constructor(cardImageSrc, cardContentText, id, property, onclickHandler = deboouncedClickCards) {
         const mainDiv = document.createElement('div');
         mainDiv.classList.add(...['cards', 'content-container-style']);
         const imageDiv = Cards.#createImageEle(cardImageSrc);
@@ -52,33 +72,13 @@ class Cards {
         buttonCard.innerText = "Know More →";
         buttonCard.setAttribute('id', id);
         buttonCard.setAttribute('property', property);
-        const onclickDebounced  = debounceFunction(onclickHandler || Cards.#handleButtonClick);
-        buttonCard.addEventListener('click', (e) => { e.preventDefault(), onclickDebounced([e]) })
+        buttonCard.addEventListener('click', (e) => { e.preventDefault(), onclickHandler([e]) })
         return buttonCard;
     }
-
     get() {
         return this.#element;
     }
 
-    static #handleButtonClick(e) {
-        let property = e.target.getAttribute('property');
-        let id = e.target.id;
-        console.log(property, id);
-        let popupModal = document.getElementById('popup-modal');
-        popupModal.innerHTML = "";
-        const getUrl = `https://myportfolio-nu64.onrender.com/${property.toLowerCase()}?id=${parseInt(id)}`;
-        fetch(getUrl, {
-            mode: 'cors',
-        }).then((data) => data.json()).then((data) => {
-            data = data.data;
-            if (data) data = data[0];
-            const modal = new Modal(data.title, data.description, data.contributions);
-            popupModal.appendChild(modal.get())
-            !popupModal.classList.contains('display-popup') && popupModal.classList.add('display-popup');
-        })
-
-    }
 }
 
 
