@@ -99,7 +99,7 @@
                         Send Message
                     </h5>
 
-                    <form class="contact-form mb-5 d-flex flex-column align-items-center justify-content-center" id="responseForm">
+                    <form class="contact-form mb-5 d-flex flex-column align-items-center justify-content-center" id="responseForm" method="post">
                         <input type="text" class="form-control mt-2 mb-2" placeholder="Your Name" name="name"
                             required="" id="name">
 
@@ -109,7 +109,7 @@
                         <textarea class="form-control mt-2 mb-2" placeholder="Your Message" name="content"
                             required="" id="message"></textarea>
 
-                        <button type="submit" class="btn btn-send">
+                        <button type="submit" class="btn btn-send" id="send-message">
                             <i class="fas fa-paper-plane"></i>
                             Send Message
                         </button>
