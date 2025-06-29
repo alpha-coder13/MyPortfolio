@@ -253,6 +253,65 @@ body {
     width: 50%;
 }
 
+.notification-drawer{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    position: fixed;
+    height: max-content;
+    width: max-content;
+    top: 5px;
+    right: 7px;
+    z-index: 8;
+    transition: all 1s ease-out;
+}
+.notification{
+    height: 3vh;
+    width: 16vw;
+    border-bottom-left-radius: .5rem;
+    border-bottom-right-radius: .5rem;
+    backdrop-filter: blur(3px);
+}
+
+.top-animation{
+    position: absolute;
+    width: 0%;
+    height: 10%;
+    top: 0rem;
+    border-top-left-radius: .5rem;
+    border-top-right-radius: .5rem;
+    left: 0;
+}
+
+.animate-top{
+    animation: bordercompletion 2s 1 ;
+}
+
+.error{
+    background-color: rgba(221, 158, 158, 0.582);
+
+    .top-animation{
+         background-color: rgba(99, 0, 0, 0.651);
+    }
+}
+.pass{
+    background-color: rgba(92, 177, 89, 0.575);
+    .top-animation{
+         background-color: rgba(0, 99, 13, 0.651);
+    }
+}
+
+@keyframes bordercompletion {
+    0%{
+        width: 100%;
+    }
+    100%{
+        width: 0%;
+    }
+}
+
+
 @media (width <=750px) {
     .section-divider {
         height: 0vh !important;

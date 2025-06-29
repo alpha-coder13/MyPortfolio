@@ -9,18 +9,17 @@ const debounceFunction  = (fn) => {
     }
 }
 
-
-const throttleFunction = (fn = function(){}, cb = function(){}) => {
+const throttleFunction = (fn = function(){}, cb = function(){}, throttleIndex =2 ) => {
     let called = false;
     return function(...args){
         if(!called){
             called=true;
             Promise.resolve(fn.apply(this,...args)).then(data => {
                 cb(data);
-                called = false;
+                setTimeout(()=>{called = false,console.log(called)},isNaN(parseInt(throttleIndex)) ? 1000 : parseInt(throttleIndex)*1000  );
             })
         }else{
-            cb("please wait before trying");
+            cb({message : "please wait before trying", mode : "pass"});
         }
     }
 }
@@ -49,7 +48,7 @@ function handleFormSubmit (e){
    const value_email = document.getElementById('email').value;
    const value_message = document.getElementById('message').textContent;
 
- return  Promise.resolve(fetch('https://myportfolio-nu64.onrender.com/',{
+ return  Promise.resolve(fetch('https://myportfolio-nu64.onrender.com/sendMessage',{
     method:"POST",
     headers:{
         'Content-Type' : "application/json",
@@ -61,14 +60,49 @@ function handleFormSubmit (e){
         message : encodeURIComponent(value_message),
     }
    }).then((data) => data.json()).then(data => {
-    if(data.)
+    if(data.status =='success'){
+        return {message:data.message, mode:"pass"};
+    }else{
+        return {message:data.message, mode:"error"}
+    }
+   }).catch(err => {
+        return {message:err.message, mode:"errors"}
    }))
 }
 
-function handlePopUp
-
 const deboouncedClickCards  = debounceFunction(handleButtonClickCards);
 
+class Notification{
+    #drawerRef = document.getElementById("notification-drawer");
+    constructor({message, mode}){
+        const ErrorDiv = document.createElement('div');
+        ErrorDiv.classList.add("notification" ,"p-2" ,"my-1");
+        if(mode == "error"){
+            ErrorDiv.classList.remove("pass");
+            ErrorDiv.classList.add("error");
+        }else{
+            ErrorDiv.classList.remove("error");
+            ErrorDiv.classList.add("pass");
+        }
+        const borderDiv  =document.createElement('div');
+        borderDiv.classList.add("top-animation","animate-top");
+        const messageSpan =document.createElement("span");
+        messageSpan.textContent = message;
+        ErrorDiv.appendChild(borderDiv);
+        ErrorDiv.appendChild(messageSpan);
+        this.#drawerRef.appendChild(ErrorDiv);
+        
+        setTimeout(()=>{
+            ErrorDiv.remove();
+        },2000);
+    }
+}
+
+function handlePopUp({message , mode}){
+    new Notification({message, mode});
+}
+
+const throttledFormSubmit = throttleFunction(handleFormSubmit,handlePopUp);
 class Cards {
     #id;
     #property;
@@ -114,8 +148,6 @@ class Cards {
     }
 
 }
-
-
 class Modal {
     #id;
     #property;
@@ -324,4 +356,4 @@ function toggleTheme() {
 }
 
 
-document.getElementById('response_form').addEventListener("submit",)
+document.getElementById('responseForm').addEventListener("submit",(e)=>{e.preventDefault(),throttledFormSubmit(e)})
