@@ -3,38 +3,39 @@ const path = require('path');
 // require('process').loadEnvFile(path.join(process.cwd(),'.env'));
 require('dotenv').config({path:path.join(process.cwd(),'.env')});
 
-const server_assets = http.createServer();
-const server_messages = http.createServer();
+const server = http.createServer();
+// const server_messages = http.createServer();
 
 
-const setCorsHeaders_assets = (req, res) => {
+const setCorsHeaders = (req, res) => {
     res.setHeader('Access-Control-Allow-Origin', 'https://alpha-coder13.github.io');
     res.setHeader('Access-Control-Allow-Methods', 'GET');
     res.setHeader('Access-Control-Allow-Headers', 'Content-Type,Authorization');
   }
 
-const setCorsHeaders_messages = (req, res) => {
-  res.setHeader('Access-Control-Allow-Origin', 'https://alpha-coder13.github.io');
-  res.setHeader('Access-Control-Allow-Methods', 'POST');
-  res.setHeader('Access-Control-Allow-Headers', 'Content-Type,Authorization');
-}
+// const setCorsHeaders_messages = (req, res) => {
+//   res.setHeader('Access-Control-Allow-Origin', 'https://alpha-coder13.github.io');
+//   res.setHeader('Access-Control-Allow-Methods', 'POST');
+//   res.setHeader('Access-Control-Allow-Headers', 'Content-Type,Authorization');
+// }
 
-server_assets.listen(process.env.PORT_GET,()=>{
+server.listen(process.env.PORT,()=>{
     console.log(process.env.PORT_GET);
 });
 
-server_messages.listen(process.env.PORT_POST,()=>{
-    console.log(process.env.PORT_POST);
-});
 
-server_assets.on('request',(req,res)=>{
+
+server.on('request',(req,res)=>{
     setCorsHeaders_assets(req,res);
-    require('./Router/server_assets/index').RequestHandler(req,res);
+
+    if(req.url.indexOf("sendMessage")==-1){
+        require('./Router/server_assets/index').RequestHandler(req,res);
+    }else{
+        require('./Router/server_messages/index').RequestHandler(req,res);
+    }
     return;
 });
 
-
-server_messages.on('request',(req,res)=>{
-    setCorsHeaders_messages(req,res);
-    require('./Router/server_messages/index').RequestHandler(req,res);
-})
+// server_messages.on('request',(req,res)=>{
+//     setCorsHeaders_messages(req,res);
+// })
