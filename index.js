@@ -26,8 +26,7 @@ server.listen(process.env.PORT,()=>{
 
 
 server.on('request',(req,res)=>{
-    setCorsHeaders_assets(req,res);
-
+    setCorsHeaders(req,res);
     if(req.url.indexOf("sendMessage")==-1){
         require('./Router/server_assets/index').RequestHandler(req,res);
     }else{
