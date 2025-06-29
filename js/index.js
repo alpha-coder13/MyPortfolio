@@ -52,12 +52,6 @@ class Cards {
         const imageDiv = document.createElement('div');
         imageDiv.classList.add(...["card-image","mt-2"]);
         imageDiv.style.background = `url('${cardImageSrc}')`
-        // const imageEle = document.createElement('img');
-        // imageEle.src = cardImageSrc;
-        // imageEle.width = "100%";
-        // imageEle.height = "100%";
-        // imageEle.style = "border: 0px; border-top-right-radius: 16px;border-top-left-radius: 16px;"
-        // imageDiv.appendChild(imageEle);
         return imageDiv;
     }
     static #createTextSpan(cardContentText) {
@@ -161,17 +155,6 @@ class Modal {
     }
 };
 
-// document.getElementById('toggleBulb').addEventListener('click',(e)=>{
-//     let val = e.target.value;
-//     if(val){
-//         document.body.classList.remove('light')
-//         document.body.classList.add('dark');
-//     }else{
-//         document.body.classList.remove('dark')
-//          document.body.classList.add('light');
-//     }
-//     e.target.value = !val;
-// })
 const experienceSection = document.querySelector('div.section-work .inner-container');
 const projectSection = document.querySelector('div.section-projects .inner-container');
 const aboutSection = document.querySelector('div.section-about .inner-container-about');
@@ -233,11 +216,6 @@ fetch('https://myportfolio-nu64.onrender.com/', {
 
 }).catch(e => console.log(e.message));
 
-
-
-// const handleOnclick = () => {
-
-// }
 
 function handleAboutData(data, contentDiv, imageDiv){
     const introText = data.intro;

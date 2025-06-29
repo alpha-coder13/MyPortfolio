@@ -62,6 +62,12 @@ body {
     font-weight: 900;
 }
 
+.heading{
+    font-size: 2rem;
+    font-weight: 900;
+
+}
+
 .hero-intro-body {
     font-size: 3vh;
     font-weight: 500;
