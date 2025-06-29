@@ -9,7 +9,7 @@ const server = http.createServer();
 
 const setCorsHeaders = (req, res) => {
     res.setHeader('Access-Control-Allow-Origin', 'https://alpha-coder13.github.io');
-    res.setHeader('Access-Control-Allow-Methods', 'GET');
+    res.setHeader('Access-Control-Allow-Methods', 'GET','POST');
     res.setHeader('Access-Control-Allow-Headers', 'Content-Type,Authorization');
   }
 
