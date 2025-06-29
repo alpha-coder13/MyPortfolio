@@ -311,7 +311,7 @@ body {
     }
 
     .inner-container-contact{
-        width: 80vw;
+        width: 80vw !important;
     }
 }
 
@@ -638,10 +638,10 @@ body {
 
 .theme-toggle {
     position: fixed;
-    top: 5px;
+    bottom: 5px;
     right: 5px;
-    width: 9vh;
-    height: 9vh;
+    width: 5vh;
+    height: 5vh;
     border-radius: 50%;
     cursor: pointer;
     transition: all 0.3s;
