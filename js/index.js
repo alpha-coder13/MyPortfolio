@@ -9,6 +9,22 @@ const debounceFunction  = (fn) => {
     }
 }
 
+
+const throttleFunction = (fn = function(){}, cb = function(){}) => {
+    let called = false;
+    return function(...args){
+        if(!called){
+            called=true;
+            Promise.resolve(fn.apply(this,...args)).then(data => {
+                cb(data);
+                called = false;
+            })
+        }else{
+            cb("please wait before trying");
+        }
+    }
+}
+
 function handleButtonClickCards(event) {
      let property = event.target.getAttribute('property');
      let id = event.target.id;
@@ -26,6 +42,30 @@ function handleButtonClickCards(event) {
         !popupModal.classList.contains('display-popup') && popupModal.classList.add('display-popup');
     })
 }
+
+function handleFormSubmit (e){
+    if(e)e.preventDefault();
+   const value_name = document.getElementById('name').value;
+   const value_email = document.getElementById('email').value;
+   const value_message = document.getElementById('message').textContent;
+
+ return  Promise.resolve(fetch('https://myportfolio-nu64.onrender.com/',{
+    method:"POST",
+    headers:{
+        'Content-Type' : "application/json",
+    },
+    mode:"cors",
+    body:{
+        name : encodeURIComponent(value_name),
+        email : encodeURIComponent(value_email),
+        message : encodeURIComponent(value_message),
+    }
+   }).then((data) => data.json()).then(data => {
+    if(data.)
+   }))
+}
+
+function handlePopUp
 
 const deboouncedClickCards  = debounceFunction(handleButtonClickCards);
 
@@ -282,3 +322,6 @@ function toggleTheme() {
         themeIcon.className = 'fas fa-moon';
     }
 }
+
+
+document.getElementById('response_form').addEventListener("submit",)
