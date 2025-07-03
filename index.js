@@ -9,7 +9,7 @@ const server = http.createServer();
 
 const setCorsHeaders = (req, res) => {
     res.setHeader('Access-Control-Allow-Origin', 'https://alpha-coder13.github.io');
-    res.setHeader('Access-Control-Allow-Methods', 'GET, POST');
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
     res.setHeader('Access-Control-Allow-Headers', 'Content-Type,Authorization');
   }
 
@@ -27,6 +27,11 @@ server.listen(process.env.PORT,()=>{
 
 server.on('request',(req,res)=>{
     setCorsHeaders(req,res);
+    if(req.method == 'OPTIONS'){
+        res.writeHead(200);
+        res.end()
+        return;
+    }
     if(req.url.indexOf("sendMessage")==-1){
         require('./Router/server_assets/index').RequestHandler(req,res);
     }else{
