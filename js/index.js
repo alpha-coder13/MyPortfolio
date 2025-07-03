@@ -46,7 +46,7 @@ function handleFormSubmit (e){
     if(e)e.preventDefault();
    const value_name = document.getElementById('name').value;
    const value_email = document.getElementById('email').value;
-   const value_message = document.getElementById('message').textContent;
+   const value_message = document.getElementById('message').value;
 
  return  Promise.resolve(fetch('https://myportfolio-nu64.onrender.com/sendMessage',{
     method:"POST",
