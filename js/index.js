@@ -66,7 +66,7 @@ function handleFormSubmit (e){
         return {message:data.message, mode:"error"}
     }
    }).catch(err => {
-        return {message:err.message, mode:"errors"}
+        return {message:err.message, mode:"error"}
    }))
 }
 

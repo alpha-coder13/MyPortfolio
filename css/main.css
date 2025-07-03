@@ -267,7 +267,8 @@ body {
     transition: all 1s ease-out;
 }
 .notification{
-    height: 3vh;
+    min-height: 3vh;
+    height: max-content;
     width: 16vw;
     border-bottom-left-radius: .5rem;
     border-bottom-right-radius: .5rem;
