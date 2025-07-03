@@ -54,11 +54,11 @@ function handleFormSubmit (e){
         'Content-Type' : "application/json",
     },
     mode:"cors",
-    body:{
+    body:JSON.stringify({
         name : encodeURIComponent(value_name),
         email : encodeURIComponent(value_email),
         message : encodeURIComponent(value_message),
-    }
+    })
    }).then((data) => data.json()).then(data => {
     if(data.status =='success'){
         return {message:data.message, mode:"pass"};
@@ -356,5 +356,5 @@ function toggleTheme() {
 }
 
 
-document.getElementById('responseForm').addEventListener("submit",(e)=>{e.preventDefault()})
-document.getElementById('send-message').addEventListener("click",(e)=>{e.preventDefault(),throttledFormSubmit(e)})
+document.getElementById('responseForm').addEventListener("submit",(e)=>{e.preventDefault(),throttledFormSubmit(e)})
+// document.getElementById('send-message').addEventListener("click",(e)=>{e.preventDefault(),throttledFormSubmit(e)})
