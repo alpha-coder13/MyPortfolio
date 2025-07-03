@@ -19,46 +19,51 @@ async function RequestHandler(req, res) {
                     const {name , email , message} = body;
                     DB_WRITE_MESSAGE({name, email, message}).then((data)=>{
                         res.writeHead('200', { 'Content-Type': 'application/json' });
-                        res.end(JSON.stringify({
+                        let responseData = JSON.stringify({
                             data:"Message Sent Successfully",
                             status : "success",
-                            message : data.toPascalCase(),
-                        }))
+                            message : data,
+                        })
+                        res.end(responseData);
                     }).catch(error => {
                         console.log("DBerror:------->",error);
                         res.writeHead('205', { 'Content-Type': 'application/json' });
-                        res.end(JSON.stringify({
+                        let responseData = JSON.stringify({
                             data:"Message Not Sent",
                             status : "failure",
                             message : "Insert failure",
-                        }))
+                        })
+                        res.end(responseData);
                     })
                 } catch (error) {
                     res.writeHead('205', { 'Content-Type': 'application/json' });
-                    res.end(JSON.stringify({
+                    let responseData = JSON.stringify({
                             data:"Request Error",
                             status : "failure",
                             message : "Parsing failure",
-                        }))
+                        });
+                    res.end(responseData);
                 }
             } else {
                     res.writeHead('205', { 'Content-Type': 'application/json' });
-                    res.end(JSON.stringify({
+                    let responseData = JSON.stringify({
                             data:"Request Error",
                             status : "failure",
                             message : "Invalid Content-Type",
-                        }))
+                        });
+                    res.end(responseData);
             }
 
 
         })
     }else{
          res.writeHead('404', { 'Content-Type': 'application/json' });
-         res.end(JSON.stringify({
+         let responseData = JSON.stringify({
                 data:"Request Error",
                 status : "failure",
                 message : "Unsupported method",
-            }))
+            })
+         res.end(responseData);
     }
 }
 
