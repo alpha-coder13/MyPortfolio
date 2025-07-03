@@ -356,4 +356,5 @@ function toggleTheme() {
 }
 
 
-document.getElementById('send-message').addEventListener("submit",(e)=>{e.preventDefault(),throttledFormSubmit(e)})
+document.getElementById('responseForm').addEventListener("submit",(e)=>{e.preventDefault()})
+document.getElementById('send-message').addEventListener("click",(e)=>{e.preventDefault(),throttledFormSubmit(e)})
