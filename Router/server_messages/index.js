@@ -17,14 +17,15 @@ async function RequestHandler(req, res) {
                     body = JSON.parse(body); // in futuore will use parseJSONfromString function , once I perfect it
                     // console.log( body,typeof body)
                     const {name , email , message} = body;
-                    DB_WRITE_MESSAGE({name, email, message}).then(()=>{
+                    DB_WRITE_MESSAGE({name, email, message}).then((data)=>{
                         res.writeHead('200', { 'Content-Type': 'application/json' });
                         res.end(JSON.stringify({
                             data:"Message Sent Successfully",
                             status : "success",
-                            message : "Insert success",
+                            message : data.toPascalCase(),
                         }))
                     }).catch(error => {
+                        console.log("DBerror:------->",error);
                         res.writeHead('204', { 'Content-Type': 'application/json' });
                         res.end(JSON.stringify({
                             data:"Message Not Sent",
