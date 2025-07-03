@@ -26,7 +26,7 @@ async function RequestHandler(req, res) {
                         }))
                     }).catch(error => {
                         console.log("DBerror:------->",error);
-                        res.writeHead('204', { 'Content-Type': 'application/json' });
+                        res.writeHead('205', { 'Content-Type': 'application/json' });
                         res.end(JSON.stringify({
                             data:"Message Not Sent",
                             status : "failure",
@@ -34,7 +34,7 @@ async function RequestHandler(req, res) {
                         }))
                     })
                 } catch (error) {
-                    res.writeHead('204', { 'Content-Type': 'application/json' });
+                    res.writeHead('205', { 'Content-Type': 'application/json' });
                     res.end(JSON.stringify({
                             data:"Request Error",
                             status : "failure",
