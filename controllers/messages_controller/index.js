@@ -7,6 +7,7 @@ function DB_WRITE_MESSAGE(data){
     const query = writeValues(...Object.values(data));
 
     return new Promise(async(resolve, reject) => {
+        try{
         const client =  await messagesPool.connect();
         client.query(query).then((response)=>{
             if(response.command == "INSERT"){
@@ -15,9 +16,12 @@ function DB_WRITE_MESSAGE(data){
                 reject("INSERT ERROR");
             }
         }).catch((error)=>{
-                reject("QUERY ERROR");
+                reject("QUERY ERROR" , error.message);
         })
         client.release();
+        }catch(e){
+                reject("CONNECTION ERROR");
+        }
     })
 }
 
