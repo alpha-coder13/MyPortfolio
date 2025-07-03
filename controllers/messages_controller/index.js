@@ -16,7 +16,7 @@ function DB_WRITE_MESSAGE(data){
                 reject("INSERT ERROR");
             }
         }).catch((error)=>{
-                reject("QUERY ERROR" , error.message);
+                reject("QUERY ERROR" , error);
         })
         client.release();
         }catch(e){
