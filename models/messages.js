@@ -31,8 +31,8 @@ const messagesPool = new Pool({
 })
 
 const writeValues = (...values) => ({
-    text : "INSERT INTO messages(name, em) VALUES($1,$2,$3)",
-    values:[...values],
+    text : "INSERT INTO messages(name, email, message_content) VALUES($1,$2,$3)",
+    values:[...values].map(val => `${val}`),
 })
 
 
