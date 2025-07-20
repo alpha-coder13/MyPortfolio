@@ -12,8 +12,34 @@
       "Backend built using NodeJS, ExpressJS, and MongoDB for account management"
     ]
   },
-  {
+    {
     "id": 2,
+    "src": "",
+    "intro": "Developed a full-stack web-based video conferencing app with real-time communication features.",
+    "description": "Created a modern video conferencing solution using React, TypeScript, and Tailwind CSS for the frontend, with WebRTC for video/audio streaming. The backend is built with Node.js and Socket.IO for real-time signaling and JWT authentication.",
+    "title": "V.C.Ation : Video Conferencing Application",
+    "contributions": [
+      "Developed a responsive frontend using React, TypeScript, and Tailwind CSS",
+      "Implemented peer-to-peer video and audio communication using WebRTC",
+      "Integrated real-time chat and device toggles (mic/cam)",
+      "Built room creation and joining logic with Socket.IO",
+      "Secured backend with JWT authentication and managed user sessions",
+      "Designed a signaling server to coordinate WebRTC connections between peers"
+    ],
+    "drawbacks":[
+      "Cannot support two systems on Different Wifi/Optical Networks",
+      "Requires stable connectivity for optimal performance",
+      "Limited to browser-based usage without native app support"
+    ],
+    "futureScope":[
+      "Increases scalability to support larger groups",
+      "Implement SFU (Selective Forwarding Unit) for better performance",
+      "Add support for mobile devices and native apps",
+      "Explore integration with third-party services for additional features"
+    ]
+  },
+  {
+    "id": 3,
     "src": "",
     "intro": "Authored a research paper analyzing blockchain limitations and consensus algorithms under academic guidance.",
     "description": "Reviewed over 25 research papers to understand emerging consensus mechanisms in blockchain. Compared popular algorithms and highlighted future research directions for scalability and security.",
@@ -25,4 +51,5 @@
       "Published under the guidance of Dr. Bam Bahadur Sinha at IIIT Ranchi"
     ]
   }
+
 ]
