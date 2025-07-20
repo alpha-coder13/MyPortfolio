@@ -1,17 +1,11 @@
 const http =require('http');
 const path = require('path');
 
-const {Server} = require('socket.io');
 // require('process').loadEnvFile(path.join(process.cwd(),'.env'));
 require('dotenv').config({path:path.join(process.cwd(),'.env')});
 
 const server = http.createServer();
 // const server_messages = http.createServer();
-const ioServer = new Server(server,{
-    cors:{
-        methods:['GET','POST']
-    }
-});
 
 const setCorsHeaders = (req, res) => {
     res.setHeader('Access-Control-Allow-Origin', `https://localhost:${process.env.PORT_GET}`);
@@ -25,13 +19,6 @@ const setCorsHeaders = (req, res) => {
 //   res.setHeader('Access-Control-Allow-Headers', 'Content-Type,Authorization');
 // }
 
-
-
-ioServer.on("connection",(socket)=>{
-    require('./Router/server_webRTC/index').socketRequestHandler(socket); 
-})
-
-ioServer.on('close',console.log);
 
 server.on('request',(req,res)=>{
     setCorsHeaders(req,res);
