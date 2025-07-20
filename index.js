@@ -6,9 +6,16 @@ require('dotenv').config({path:path.join(process.cwd(),'.env')});
 
 const server = http.createServer();
 // const server_messages = http.createServer();
+const allowedOrigins = [
+  'https://alpha-coder13.github.io',
+  `https://localhost:${process.env.PORT_GET}`
+];
 
 const setCorsHeaders = (req, res) => {
-    res.setHeader('Access-Control-Allow-Origin', `https://localhost:${process.env.PORT_GET}`);
+    // res.setHeader('Access-Control-Allow-Origin', 'https://alpha-coder13.github.io');
+    if(allowedOrigins.includes(req.headers.origin)){
+        res.setHeader('Access-Control-Allow-Origin'  ,req.headers.origin );
+    }
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
     res.setHeader('Access-Control-Allow-Headers', 'Content-Type,Authorization');
   }
